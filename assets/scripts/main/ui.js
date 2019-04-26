@@ -5,7 +5,7 @@ const showGoalsTemplate = require('../templates/goal-listing.handlebars')
 const getGoalsSuccess = (data) => {
   console.log('data: ', data)
   const showGoalsHtml = showGoalsTemplate({ goals: data.goals })
-  $('.content').text(showGoalsHtml)
+  $('.content').html(showGoalsHtml)
 }
 
 // const clearBooks = () => {

@@ -13,6 +13,57 @@
     </head>
     <body>
       <h1>Hi, Sam</h1>
+
+      <div class="sign-up-sign-in-div">
+        <!--SIGN UP-->
+        <div class=sign-up-div>
+          <form id="sign-up-form">
+            <h4 class="col-12 subtitle">Sign up</h4>
+            <input required class="col-12" type="email" name="credentials[email]" placeholder="Email">
+            <input required class="col-12" type="password" name="credentials[password]" placeholder="Password">
+            <input required class="col-12" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+            <input class="col-12 btn btn-dark" type="submit" value="Sign up!">
+            <p id="sign-up-display"></p>
+            <p>Already registered? Sign in below</p>
+          </form>
+        </div>
+        <!--SIGN IN-->
+        <div class="sign-in-div">
+          <form id="sign-in">
+            <h4 class="col-12 subtitle">Sign in</h4>
+            <input required class="col-12" type="email" name="credentials[email]" placeholder="Email">
+            <input required class="col-12" type="password" name="credentials[password]" placeholder="Password">
+            <input class="col-12 btn btn-dark" type="submit" value="Sign in!">
+            <p id="sign-in-display"></p>
+          </form>
+        </div>
+      </div>
+
+      <!--CHANGE PW BUTTON-->
+      <div class='change-password-button-div'>
+        <button id="show-change-password-form" class="col-12 btn btn-dark">Change Password</button>
+        <p id="change-password-display"></p>
+      </div>
+
+      <!--CHANGE PW FORM-->
+      <div class="change-password-form-div">
+        <form id="change-password-form">
+          <input class="col-8" type="password" name="passwords[old]" placeholder="current password">
+          <br>
+          <input class="col-8" type="password" name="passwords[new]" placeholder="new password">
+          <br>
+          <input class="col-12 btn btn-dark" type="submit" value="Change password now">
+        </form>
+      </div>
+
+      <!--SIGN OUT-->
+      <div class="sign-out-div">
+        <form id="sign-out">
+          <input class="col-12 btn btn-dark" type="submit" value="Sign Out!">
+          <p id="sign-out-display"></p>
+        </form>
+      </div>
+
       <div class="buttons">
 
         <form>
