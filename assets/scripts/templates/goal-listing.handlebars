@@ -1,0 +1,20 @@
+{{#each goals as |goal|}}
+  {{log goal}}
+  <section data-id="{{goal.id}}">
+    <h6>Title:</h6>
+    <h3>
+      {{goal.title}}
+    </h3>
+
+    <h6>Description:</h6>
+    <p>
+      {{#if goal.description}}
+        {{goal.description}}
+      {{else}}
+        No description provided.
+      {{/if}}
+    </p>
+    <button data-id="{{goal.id}}" class="btn btn-danger delete">Remove</button>
+  </section>
+
+{{/each}}
