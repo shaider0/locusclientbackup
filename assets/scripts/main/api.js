@@ -9,6 +9,26 @@ const getGoals = () => {
   })
 }
 
+const createGoal = (formData) => {
+  return $.ajax({
+    url: config.apiUrl + '/goals',
+    method: 'POST',
+    headers: {authorization: 'Token token=' + store.user.token},
+    data: formData
+  })
+}
+
+// data: {
+//       'game': {
+//         'cell': {
+//           'index': store.index,
+//           'value': store.value
+//         },
+//         'over': store.gameOver
+//       }
+//     }
+
 module.exports = {
-  getGoals
+  getGoals,
+  createGoal
 }

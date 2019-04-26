@@ -3,21 +3,20 @@
 const showGoalsTemplate = require('../templates/goal-listing.handlebars')
 
 const getGoalsSuccess = (data) => {
-  console.log('data: ', data)
   const showGoalsHtml = showGoalsTemplate({ goals: data.goals })
   $('.content').html(showGoalsHtml)
 }
 
-// const clearBooks = () => {
-//   $('.content').empty()
-// }
+const createGoalSuccess = () => {
+  console.log('goal created')
+}
 
 const failure = (error) => {
-  console.error(error)
+  console.error('something went wrong', error)
 }
 
 module.exports = {
   getGoalsSuccess,
-  // clearBooks,
-  failure
+  failure,
+  createGoalSuccess
 }

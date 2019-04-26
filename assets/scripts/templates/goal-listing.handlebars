@@ -1,12 +1,13 @@
+<h3>Goals</h3>
 {{#each goals as |goal|}}
   {{log goal}}
   <section data-id="{{goal.id}}">
-    <h6>Title:</h6>
-    <h3>
+    <h4>Title:</h4>
+    <p>
       {{goal.title}}
-    </h3>
+    <p>
 
-    <h6>Description:</h6>
+    <h4>Description:</h4>
     <p>
       {{#if goal.description}}
         {{goal.description}}
