@@ -18,9 +18,18 @@ const onCreateGoal = (event) => {
     .catch(console.log('something went wrong with create goal'))
 }
 
+const onGetGoal = (event) => {
+  const formData = getFormFields(event.target)
+  event.preventDefault()
+  api.getGoal(formData)
+    .then(ui.getGoalSuccess)
+    .catch(ui.failure)
+}
+
 const addHandlers = () => {
   $('.goal-btn').on('click', onGetGoals)
   $('.create-goal-form').on('submit', onCreateGoal)
+  $('.get-goal-form').on('submit', onGetGoal)
 }
 
 module.exports = {

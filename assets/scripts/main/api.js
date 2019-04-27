@@ -18,17 +18,17 @@ const createGoal = (formData) => {
   })
 }
 
-// data: {
-//       'game': {
-//         'cell': {
-//           'index': store.index,
-//           'value': store.value
-//         },
-//         'over': store.gameOver
-//       }
-//     }
+const getGoal = (formData) => {
+  // console.log('formData is:', formData)
+  return $.ajax({
+    url: config.apiUrl + '/goals/' + formData.goal.id,
+    method: 'GET',
+    headers: {authorization: 'Token token=' + store.user.token}
+  })
+}
 
 module.exports = {
   getGoals,
-  createGoal
+  createGoal,
+  getGoal
 }

@@ -64,11 +64,19 @@
         </form>
       </div>
 
+      <div class="error-display"></div>
+
       <form class="create-goal-form">
         <h3>Create New Goal</h3>
         <input type="text" name="goal[title]" placeholder="title">
         <input type="text" name="goal[description]" placeholder="description">
         <input class="create-goal-btn btn btn-primary" type="submit" value="add">
+      </form>
+
+      <form class="get-goal-form">
+        <h3>Get Goal</h3>
+        <input type="number" name="goal[id]" placeholder="goal id">
+        <input class="find-goal-btn btn btn-primary" type="submit" value="find">
       </form>
 
       <div class="buttons">
