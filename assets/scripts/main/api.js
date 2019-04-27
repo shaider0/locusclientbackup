@@ -35,9 +35,19 @@ const deleteGoal = (id) => {
   })
 }
 
+const updateGoal = (formData) => {
+  return $.ajax({
+    url: config.apiUrl + '/goals/' + formData.goal.id,
+    method: 'PATCH',
+    headers: {authorization: 'Token token=' + store.user.token},
+    data: formData
+  })
+}
+
 module.exports = {
   getGoals,
   createGoal,
   getGoal,
-  deleteGoal
+  deleteGoal,
+  updateGoal
 }

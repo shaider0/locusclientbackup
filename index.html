@@ -79,8 +79,17 @@
         <input class="find-goal-btn btn btn-primary" type="submit" value="find">
       </form>
 
-      <div class="buttons">
+      <form class="update-goal-form">
+        <h3>Update Goal</h3>
+        <input type="number" name="goal[id]" placeholder="goal id">
+        <input type="text" name="goal[title]" placeholder="title">
+        <input type="text" name="goal[description]" placeholder="description">
+        <input class="update-goal-btn btn btn-primary" type="submit" value="update">
+      </form>
 
+
+      <div class="buttons">
+        <h3>See all goals</h3>
         <form>
           <input type="submit" class="btn btn-primary goal-btn" value="Goals">
         </form>
