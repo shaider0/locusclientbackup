@@ -17,6 +17,10 @@ const getGoalSuccess = (data) => {
   $('.content').html(showGoalHtml)
 }
 
+const deleteGoalSuccess = () => {
+  console.log('goal deleted')
+}
+
 const failure = () => {
   $('.error-display').text('something went wrong. please try again')
 }
@@ -25,5 +29,6 @@ module.exports = {
   getGoalsSuccess,
   failure,
   createGoalSuccess,
-  getGoalSuccess
+  getGoalSuccess,
+  deleteGoalSuccess
 }

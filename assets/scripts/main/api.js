@@ -19,7 +19,6 @@ const createGoal = (formData) => {
 }
 
 const getGoal = (formData) => {
-  // console.log('formData is:', formData)
   return $.ajax({
     url: config.apiUrl + '/goals/' + formData.goal.id,
     method: 'GET',
@@ -27,8 +26,18 @@ const getGoal = (formData) => {
   })
 }
 
+const deleteGoal = (id) => {
+  console.log('id is', id)
+  return $.ajax({
+    url: config.apiUrl + '/goals/' + id,
+    method: 'DELETE',
+    headers: {authorization: 'Token token=' + store.user.token}
+  })
+}
+
 module.exports = {
   getGoals,
   createGoal,
-  getGoal
+  getGoal,
+  deleteGoal
 }

@@ -26,10 +26,18 @@ const onGetGoal = (event) => {
     .catch(ui.failure)
 }
 
+const onDeleteGoal = (event) => {
+  const id = $(event.target).data('id')
+  api.deleteGoal(id)
+    .then(ui.deleteGoalSuccess)
+    .catch(ui.failure)
+}
+
 const addHandlers = () => {
   $('.goal-btn').on('click', onGetGoals)
   $('.create-goal-form').on('submit', onCreateGoal)
   $('.get-goal-form').on('submit', onGetGoal)
+  $('.content').on('click', onDeleteGoal)
 }
 
 module.exports = {
