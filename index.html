@@ -1,114 +1,137 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>locus</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <title>locus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!-- Do not add `link` tags-->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <h1>Hi, Sam</h1>
+    <!-- Do not add `script` tags-->
+    <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+    <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+  </head>
+  <body>
+      <div class="logo-div">
+      <div class="logo-overlay">
+          <span class="logo">
+            <span class="l">L</span>
+            <span class="o">O</span>
+            <span class="c">C</span>
+            <span class="u">U</span>
+            <span class="s">S</span>
+          </span>
+      </div>
+      </div>
+
+      <div class="show-sign-up-sign-in-div">
+        <span class="show-sign-up"><a href="#">Sign Up</a></span>
+        <span class="show-sign-in"><a href="#">Sign In</a></span>
+      </div>
 
       <div class="sign-up-sign-in-div">
         <!--SIGN UP-->
         <div class=sign-up-div>
-          <form id="sign-up-form">
-            <h4 class="col-12 subtitle">Sign up</h4>
-            <input required class="col-12" type="email" name="credentials[email]" placeholder="Email">
-            <input required class="col-12" type="password" name="credentials[password]" placeholder="Password">
-            <input required class="col-12" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-            <input class="col-12 btn btn-dark" type="submit" value="Sign up!">
-            <p id="sign-up-display"></p>
-            <p>Already registered? Sign in below</p>
+          <form class="sign-up-form">
+            <h4>Sign Up Form</h4>
+            <input required type="email" name="credentials[email]" placeholder="Email">
+            <input required type="password" name="credentials[password]" placeholder="Password">
+            <input required type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+            <input class="btn btn-dark" type="submit" value="Sign Up Now!">
+            <p class="sign-up-display"></p>
           </form>
         </div>
         <!--SIGN IN-->
         <div class="sign-in-div">
-          <form id="sign-in">
-            <h4 class="col-12 subtitle">Sign in</h4>
-            <input required class="col-12" type="email" name="credentials[email]" placeholder="Email">
-            <input required class="col-12" type="password" name="credentials[password]" placeholder="Password">
-            <input class="col-12 btn btn-dark" type="submit" value="Sign in!">
-            <p id="sign-in-display"></p>
+          <form class="sign-in-form">
+            <h4 class="subtitle">Sign in</h4>
+            <input required class="" type="email" name="credentials[email]" placeholder="Email">
+            <input required class="" type="password" name="credentials[password]" placeholder="Password">
+            <input class="btn btn-dark" type="submit" value="Sign in!">
+            <p class="sign-in-display"></p>
           </form>
         </div>
       </div>
 
       <!--CHANGE PW BUTTON-->
       <div class='change-password-button-div'>
-        <button id="show-change-password-form" class="col-12 btn btn-dark">Change Password</button>
-        <p id="change-password-display"></p>
+        <button class="show-change-password-form btn btn-dark">Change Password</button>
+        <p class="change-password-display"></p>
       </div>
 
       <!--CHANGE PW FORM-->
       <div class="change-password-form-div">
-        <form id="change-password-form">
-          <input class="col-8" type="password" name="passwords[old]" placeholder="current password">
+        <form class="change-password-form">
+          <input type="password" name="passwords[old]" placeholder="current password">
           <br>
-          <input class="col-8" type="password" name="passwords[new]" placeholder="new password">
+          <input type="password" name="passwords[new]" placeholder="new password">
           <br>
-          <input class="col-12 btn btn-dark" type="submit" value="Change password now">
+          <input class="c btn btn-dark" type="submit" value="Change password now">
         </form>
       </div>
 
       <!--SIGN OUT-->
       <div class="sign-out-div">
-        <form id="sign-out">
-          <input class="col-12 btn btn-dark" type="submit" value="Sign Out!">
-          <p id="sign-out-display"></p>
+        <form class="sign-out">
+          <input class="btn btn-dark" type="submit" value="Sign Out!">
+          <p class="sign-out-display"></p>
         </form>
       </div>
 
-      <div class="error-display"></div>
+      <nav>
+        <span><a href="#">Goals</a></span>
+        <span><a href="#">Tasks</a></span>
+        <span><a href="#">Schedule</a></span>
+      </nav>
 
-      <form class="create-goal-form">
-        <h3>Create New Goal</h3>
-        <input type="text" name="goal[title]" placeholder="title">
-        <input type="text" name="goal[description]" placeholder="description">
-        <input class="create-goal-btn btn btn-primary" type="submit" value="add">
-      </form>
+      <main>
+        <h1>Hi, Sam</h1>
+        <div class="error-display"></div>
 
-      <form class="get-goal-form">
-        <h3>Get Goal</h3>
-        <input type="number" name="goal[id]" placeholder="goal id">
-        <input class="find-goal-btn btn btn-primary" type="submit" value="find">
-      </form>
-
-      <form class="update-goal-form">
-        <h3>Update Goal</h3>
-        <input type="number" name="goal[id]" placeholder="goal id">
-        <input type="text" name="goal[title]" placeholder="title">
-        <input type="text" name="goal[description]" placeholder="description">
-        <input class="update-goal-btn btn btn-primary" type="submit" value="update">
-      </form>
-
-
-      <div class="buttons">
-        <h3>See all goals</h3>
-        <form>
-          <input type="submit" class="btn btn-primary goal-btn" value="Goals">
+        <form class="create-goal-form">
+          <h3>Create New Goal</h3>
+          <input type="text" name="goal[title]" placeholder="title">
+          <input type="text" name="goal[description]" placeholder="description">
+          <input class="create-goal-btn btn btn-primary" type="submit" value="add">
         </form>
 
-        <form>
-          <input type="submit" class="btn btn-primary task-btn" value="Tasks">
+        <form class="get-goal-form">
+          <h3>Get Goal</h3>
+          <input type="number" name="goal[id]" placeholder="goal id">
+          <input class="find-goal-btn btn btn-primary" type="submit" value="find">
         </form>
 
-        <form>
-          <input type="submit" class="btn btn-primary schedule-btn" value="Schedule">
+        <form class="update-goal-form">
+          <h3>Update Goal</h3>
+          <input type="number" name="goal[id]" placeholder="goal id">
+          <input type="text" name="goal[title]" placeholder="title">
+          <input type="text" name="goal[description]" placeholder="description">
+          <input class="update-goal-btn btn btn-primary" type="submit" value="update">
         </form>
 
-        <form>
-          <input type="submit" class="btn btn-primary resource-btn" value="Resources">
-        </form>
 
-      </div>
+        <div class="buttons">
+          <h3>See all goals</h3>
+          <form>
+            <input type="submit" class="btn btn-primary goal-btn" value="Goals">
+          </form>
 
-      <div class="content">
-      </div>
-    </body>
+          <!-- <form>
+            <input type="submit" class="btn btn-primary task-btn" value="Tasks">
+          </form>
+
+          <form>
+            <input type="submit" class="btn btn-primary schedule-btn" value="Schedule">
+          </form>
+
+          <form>
+            <input type="submit" class="btn btn-primary resource-btn" value="Resources">
+          </form> -->
+        </div>
+
+        <div class="content">
+        </div>
+      </main>
+
+  </body>
 </html>

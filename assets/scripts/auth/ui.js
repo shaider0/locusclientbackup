@@ -2,12 +2,12 @@ const store = require('../store')
 
 const signUpSuccess = function (formData) {
   $('form').trigger('reset')
-  $('#sign-up-display').text('New account created! Please sign in below.')
+  $('.sign-up-display').text('New account created! Please sign in below.')
 }
 
 const signUpFailure = function (formData) {
   $('form').trigger('reset')
-  $('#sign-up-display').text('Something went wrong. Please try again.')
+  $('.sign-up-display').text('Something went wrong. Please try again.')
 }
 
 const signInSuccess = function (formData) {
@@ -19,7 +19,7 @@ const signInSuccess = function (formData) {
 }
 
 const signInFailure = function (formData) {
-  $('#sign-in-display').text('Please try again')
+  $('.sign-in-display').text('Please try again')
   $('form').trigger('reset')
 }
 
@@ -28,17 +28,17 @@ const showChangePasswordForm = function () {
 }
 
 const changePwSuccess = function () {
-  $('#change-password-display').text('Password changed!')
+  $('.change-password-display').text('Password changed!')
   $('.change-password-form-div').hide()
   $('form').trigger('reset')
   setTimeout(function () {
-    $('#change-password-display').text('')
+    $('.change-password-display').text('')
   }, 2000
   )
 }
 
 const changePwFailure = function () {
-  $('#change-password-display').text('Something went wrong. Please try again.')
+  $('.change-password-display').text('Something went wrong. Please try again.')
   $('form').trigger('reset')
 }
 
@@ -50,14 +50,14 @@ const signOutSuccess = function () {
   $('.change-password-form-div').hide()
   $('.sign-out-div').hide()
 
-  $('#sign-up-display').text('')
-  $('#sign-in-display').text('')
-  $('#change-password-display').text('')
-  $('#sign-out-display').text('')
+  $('.sign-up-display').text('')
+  $('.sign-in-display').text('')
+  $('.change-password-display').text('')
+  $('.sign-out-display').text('')
 }
 
 const signOutFailure = function () {
-  $('#sign-out-display').text('Please try again later')
+  $('.sign-out-display').text('Please try again later')
 }
 
 module.exports = {

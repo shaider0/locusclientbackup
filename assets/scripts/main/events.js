@@ -44,12 +44,21 @@ const onUpdateGoal = (event) => {
     .catch(ui.failure)
 }
 
+const onShowSignUp = () => {
+  const signUp = $('.sign-up-div')
+  signUp.show()
+  $('.logo').hide()
+  $('.logo-overlay').hide()
+  $('.logo-div').prepend(signUp)
+}
+
 const addHandlers = () => {
   $('.goal-btn').on('click', onGetGoals)
   $('.create-goal-form').on('submit', onCreateGoal)
   $('.get-goal-form').on('submit', onGetGoal)
   $('.content').on('click', onDeleteGoal)
   $('.update-goal-form').on('submit', onUpdateGoal)
+  $('.show-sign-up').on('click', onShowSignUp)
 }
 
 module.exports = {
