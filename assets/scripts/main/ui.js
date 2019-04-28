@@ -29,9 +29,6 @@ const failure = () => {
   $('.error-display').text('something went wrong. please try again')
 }
 
-
-
-
 module.exports = {
   getGoalsSuccess,
   failure,

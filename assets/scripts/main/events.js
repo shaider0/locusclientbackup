@@ -52,13 +52,31 @@ const onShowSignUp = () => {
   $('.logo-div').prepend(signUp)
 }
 
+const onShowSignIn = () => {
+  const signIn = $('.sign-in-div')
+  signIn.show()
+  $('.logo').hide()
+  $('.logo-overlay').hide()
+  $('.logo-div').prepend(signIn)
+}
+
+const onSettings = () => {
+  const changePwForm = $('.change-password-form-div')
+  changePwForm.show()
+  $('.logo').hide()
+  $('.logo-overlay').hide()
+  $('.logo-div').prepend(changePwForm)
+}
+
 const addHandlers = () => {
-  $('.goal-btn').on('click', onGetGoals)
+  $('.get-goals').on('click', onGetGoals)
+  $('.settings').on('click', onSettings)
   $('.create-goal-form').on('submit', onCreateGoal)
   $('.get-goal-form').on('submit', onGetGoal)
   $('.content').on('click', onDeleteGoal)
   $('.update-goal-form').on('submit', onUpdateGoal)
   $('.show-sign-up').on('click', onShowSignUp)
+  $('.show-sign-in').on('click', onShowSignIn)
 }
 
 module.exports = {

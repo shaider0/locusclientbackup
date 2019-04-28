@@ -48,9 +48,14 @@ body {
 .logo-overlay {
   text-align: center;
   height: 550px;
-  line-height: 450px;
+  line-height: 100px;
+  padding-top: 200px;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5)
+}
+
+.logo-overlay h3 {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .show-sign-up-sign-in-div {
@@ -75,16 +80,34 @@ body {
   background-size: cover;
 }
 
-.sign-up-div {
+.sign-up-div,
+.sign-in-div,
+.change-password-form-div {
   padding: 100px 0;
   height: 550px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, .5);
   text-align: center;
 }
 
-.sign-up-form input {
+.sign-up-form input,
+.sign-in-form input,
+.change-password-form-div input {
   margin: 4px auto;
   padding: 5px;
   display: block;
   width: 400px;
+}
+
+nav span {
+  margin: 0 10px;
+}
+
+nav {
+  float: right;
+}
+
+.sign-out-div {
+  display: inline;
+  float: right;
+  margin-right: 30px;
 }

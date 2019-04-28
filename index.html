@@ -21,6 +21,7 @@
             <span class="u">U</span>
             <span class="s">S</span>
           </span>
+          <h5>Where goals get done (or a better tagline)</h5>
       </div>
       </div>
 
@@ -29,7 +30,6 @@
         <span class="show-sign-in"><a href="#">Sign In</a></span>
       </div>
 
-      <div class="sign-up-sign-in-div">
         <!--SIGN UP-->
         <div class=sign-up-div>
           <form class="sign-up-form">
@@ -41,47 +41,40 @@
             <p class="sign-up-display"></p>
           </form>
         </div>
+
         <!--SIGN IN-->
         <div class="sign-in-div">
           <form class="sign-in-form">
-            <h4 class="subtitle">Sign in</h4>
+            <h4>Sign In</h4>
             <input required class="" type="email" name="credentials[email]" placeholder="Email">
             <input required class="" type="password" name="credentials[password]" placeholder="Password">
             <input class="btn btn-dark" type="submit" value="Sign in!">
             <p class="sign-in-display"></p>
           </form>
         </div>
-      </div>
-
-      <!--CHANGE PW BUTTON-->
-      <div class='change-password-button-div'>
-        <button class="show-change-password-form btn btn-dark">Change Password</button>
-        <p class="change-password-display"></p>
-      </div>
 
       <!--CHANGE PW FORM-->
       <div class="change-password-form-div">
         <form class="change-password-form">
+          <h4>Change Password</h4>
           <input type="password" name="passwords[old]" placeholder="current password">
-          <br>
           <input type="password" name="passwords[new]" placeholder="new password">
-          <br>
           <input class="c btn btn-dark" type="submit" value="Change password now">
         </form>
       </div>
 
-      <!--SIGN OUT-->
-      <div class="sign-out-div">
-        <form class="sign-out">
-          <input class="btn btn-dark" type="submit" value="Sign Out!">
-          <p class="sign-out-display"></p>
-        </form>
-      </div>
-
       <nav>
-        <span><a href="#">Goals</a></span>
+        <span><a class ="get-goals" href="#">Goals</a></span>
         <span><a href="#">Tasks</a></span>
         <span><a href="#">Schedule</a></span>
+        <span><a href="#">Resources</a></span>
+        <span><a class="settings" href="#">Settings</a></span>
+          <div class="sign-out-div">
+            <form class="sign-out">
+              <input class="btn btn-dark" type="submit" value="Sign Out!">
+              <p class="sign-out-display"></p>
+            </form>
+          </div>
       </nav>
 
       <main>
@@ -92,13 +85,13 @@
           <h3>Create New Goal</h3>
           <input type="text" name="goal[title]" placeholder="title">
           <input type="text" name="goal[description]" placeholder="description">
-          <input class="create-goal-btn btn btn-primary" type="submit" value="add">
+          <input class="btn btn-primary" type="submit" value="add">
         </form>
 
         <form class="get-goal-form">
           <h3>Get Goal</h3>
           <input type="number" name="goal[id]" placeholder="goal id">
-          <input class="find-goal-btn btn btn-primary" type="submit" value="find">
+          <input class="btn btn-primary" type="submit" value="find">
         </form>
 
         <form class="update-goal-form">
@@ -106,15 +99,15 @@
           <input type="number" name="goal[id]" placeholder="goal id">
           <input type="text" name="goal[title]" placeholder="title">
           <input type="text" name="goal[description]" placeholder="description">
-          <input class="update-goal-btn btn btn-primary" type="submit" value="update">
+          <input class="btn btn-primary" type="submit" value="update">
         </form>
 
 
         <div class="buttons">
-          <h3>See all goals</h3>
+          <!-- <h3>See all goals</h3>
           <form>
             <input type="submit" class="btn btn-primary goal-btn" value="Goals">
-          </form>
+          </form> -->
 
           <!-- <form>
             <input type="submit" class="btn btn-primary task-btn" value="Tasks">

@@ -12,7 +12,8 @@ const signUpFailure = function (formData) {
 
 const signInSuccess = function (formData) {
   store.user = formData.user
-  $('.sign-up-sign-in-div').hide()
+  $('.sign-up-div').hide()
+  $('.sign-in-div').hide()
   $('.change-password-button-div').show()
   $('.change-password-form-div').hide()
   $('.sign-out-div').show()
@@ -45,7 +46,6 @@ const changePwFailure = function () {
 const signOutSuccess = function () {
   store.user = null
   $('form').trigger('reset')
-  $('.sign-up-sign-in-div').show()
   $('.change-password-button-div').hide()
   $('.change-password-form-div').hide()
   $('.sign-out-div').hide()
