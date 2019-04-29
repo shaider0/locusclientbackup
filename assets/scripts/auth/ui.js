@@ -18,6 +18,7 @@ const signInSuccess = function (formData) {
   $('nav').show()
   $('.main-overlay').prepend($('nav'))
   $('.message-display').text('')
+  $('.main-container').css('background-image', 'url("https://images.unsplash.com/photo-1555985202-12975b0235dc?ixlib=rb-1.2.1&auto=format&fit=crop&w=2549&q=80")')
 }
 
 const signOutSuccess = function () {
@@ -30,6 +31,7 @@ const signOutSuccess = function () {
   $('.show-sign-in').show()
   $('.goal-div').hide()
   $('.message-display').text('')
+  $('.main-container').css('background-image', 'url("https://images.unsplash.com/photo-1528818955841-a7f1425131b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2689&q=80")')
 
   // $('.logo').show()
   // $('.logo-overlay').show()
@@ -52,14 +54,27 @@ const changePwSuccess = function () {
 
   setTimeout(clearText, 3000)
 
-  $('.change-password-form-div').hide()
+  const hide = () => {
+    $('.change-password-form-div').hide()
+  }
+  setTimeout(hide, 3000)
+
   $('form').trigger('reset')
-  $('nav').show()
+
+  const show = () => {
+    $('nav').show()
+  }
+  setTimeout(show, 3000)
 }
 
 const failure = function () {
-  $('.message-display').text('Something went wrong. Please try again.')
   $('form').trigger('reset')
+  $('.message-display').text('Something went wrong. Please try again.')
+
+  const clearError = () => {
+    $('.message-display').text('')
+  }
+  setTimeout(clearError, 3000)
 }
 
 module.exports = {

@@ -18,6 +18,24 @@
     <!-- main container -->
       <div class="main-container">
         <div class="main-overlay">
+          <!-- navbar (only shown when logged in) -->
+          <nav>
+            <img class="logo" alt="logo" src="./assets/images/logo.png">
+            <div class="nav-right-side">
+              <div class="sign-out-div">
+                <form class="sign-out">
+                  <input class="btn btn-dark" type="submit" value="Sign Out!">
+                  <p class="sign-out-display"></p>
+                </form>
+              </div>
+              <span><a class="settings" href="#">Settings</a></span>
+              <!-- <span><a href="#">Resources</a></span>
+              <span><a href="#">Schedule</a></span>
+              <span><a href="#">Tasks</a></span> -->
+              <span><a class ="get-goals" href="#">Goals</a></span>
+            </div>
+          </nav>
+
           <div class="message-display"></div>
             <div class="title">
               <span class="l">L</span>
@@ -32,25 +50,6 @@
             <span class="show-sign-in"><a href="#">Sign In</a></span>
         </div>
       </div>
-
-
-      <!-- navbar (only shown when logged in) -->
-      <nav>
-        <img class="logo" alt="logo" src="./assets/images/logo.png">
-        <div class="nav-right-side">
-          <div class="sign-out-div">
-            <form class="sign-out">
-              <input class="btn btn-dark" type="submit" value="Sign Out!">
-              <p class="sign-out-display"></p>
-            </form>
-          </div>
-          <span><a class="settings" href="#">Settings</a></span>
-          <!-- <span><a href="#">Resources</a></span>
-          <span><a href="#">Schedule</a></span>
-          <span><a href="#">Tasks</a></span> -->
-          <span><a class ="get-goals" href="#">Goals</a></span>
-        </div>
-      </nav>
 
         <!--SIGN UP-->
         <div class=sign-up-div>
@@ -82,6 +81,7 @@
           <input type="password" name="passwords[old]" placeholder="current password">
           <input type="password" name="passwords[new]" placeholder="new password">
           <input class="btn btn-dark" type="submit" value="Change password now">
+          <a class="cancel" href="#">Cancel</a>
         </form>
       </div>
 

@@ -73,6 +73,12 @@ const onSettings = () => {
   $('.main-overlay').prepend(changePwForm)
 }
 
+const onCancel = () => {
+  const changePwForm = $('.change-password-form-div')
+  changePwForm.hide()
+  $('nav').show()
+}
+
 const onGoBack = () => {
   $('.logo').show()
   $('.logo-overlay').show()
@@ -81,6 +87,11 @@ const onGoBack = () => {
   $('.sign-in-div').hide()
   $('.sign-up-div').hide()
   $('.go-back').hide()
+}
+
+const onLogo = () => {
+  $('.goal-div').hide()
+  $('form').trigger('reset')
 }
 
 const addHandlers = () => {
@@ -93,6 +104,8 @@ const addHandlers = () => {
   $('.show-sign-up').on('click', onShowSignUp)
   $('.show-sign-in').on('click', onShowSignIn)
   $('.go-back').on('click', onGoBack)
+  $('.cancel').on('click', onCancel)
+  $('.logo').on('click', onLogo)
 }
 
 module.exports = {
