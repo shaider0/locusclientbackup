@@ -47,25 +47,38 @@ const onUpdateGoal = (event) => {
 const onShowSignUp = () => {
   const signUp = $('.sign-up-div')
   signUp.show()
-  $('.logo').hide()
-  $('.logo-overlay').hide()
-  $('.logo-div').prepend(signUp)
+  $('.go-back').show()
+  $('.sign-in-div').hide()
+  $('.title').hide()
+  $('.tagline').hide()
+  $('.main-overlay').prepend(signUp)
 }
 
 const onShowSignIn = () => {
   const signIn = $('.sign-in-div')
   signIn.show()
-  $('.logo').hide()
-  $('.logo-overlay').hide()
-  $('.logo-div').prepend(signIn)
+  $('.go-back').show()
+  $('.sign-up-div').hide()
+  $('.title').hide()
+  $('.tagline').hide()
+  $('.main-overlay').prepend(signIn)
 }
 
 const onSettings = () => {
   const changePwForm = $('.change-password-form-div')
   changePwForm.show()
-  $('.logo').hide()
-  $('.logo-overlay').hide()
-  $('.logo-div').prepend(changePwForm)
+  $('nav').hide()
+  $('.main-overlay').prepend(changePwForm)
+}
+
+const onGoBack = () => {
+  $('.logo').show()
+  $('.logo-overlay').show()
+  $('.title').show()
+  $('.tagline').show()
+  $('.sign-in-div').hide()
+  $('.sign-up-div').hide()
+  $('.go-back').hide()
 }
 
 const addHandlers = () => {
@@ -77,6 +90,7 @@ const addHandlers = () => {
   $('.update-goal-form').on('submit', onUpdateGoal)
   $('.show-sign-up').on('click', onShowSignUp)
   $('.show-sign-in').on('click', onShowSignIn)
+  $('.go-back').on('click', onGoBack)
 }
 
 module.exports = {

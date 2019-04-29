@@ -10,11 +10,26 @@ body {
   color: white;
 }
 
-.logo {
+// main-container
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1528818955841-a7f1425131b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2689&q=80");
+  background-size: cover;
+}
+
+.main-overlay {
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4)
+}
+
+.title {
   font-size: 100px;
   font-family: helvetica;
-  border-radius: 10px;
-  padding: 5px;
+  padding-top: 30vh;
 }
 
 .l {
@@ -37,56 +52,67 @@ body {
   color: rgba(200, 200, 255, 0.7)
 }
 
-.logo-div {
-  margin: 10px auto;
-  width: device-width;
-  height: 550px;
-  background-image: url("https://images.unsplash.com/photo-1528818955841-a7f1425131b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2689&q=80");
-  background-size: cover;
-}
-
-.logo-overlay {
-  text-align: center;
-  height: 550px;
-  line-height: 100px;
-  padding-top: 200px;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5)
-}
-
-.logo-overlay h3 {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.show-sign-up-sign-in-div {
-  text-align: center;
+.tagline {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 25px;
 }
 
 .show-sign-up, .show-sign-in {
   font-size: 23px;
-  line-height: 60px;
-  margin: 0 30px;
+  line-height: 160px;
+  margin: 0 40px;
+  padding: 12px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
 }
 
 .show-sign-up a, .show-sign-in a {
   color: #dcd7ff;
 }
 
-.background {
-  width: 100%;
-  height: 700px;
-  background-image: url('https://images.unsplash.com/photo-1491466424936-e304919aada7?ixlib=rb-1.2.1&auto=format&fit=crop&w=2549&q=80');
-  background-repeat: no-repeat;
-  background-size: cover;
+.go-back a {
+  color: white;
+}
+
+// navbar
+
+nav {
+  height: 40px;
+  padding-top: 20px;
+}
+.logo {
+  height: 40px;
+  width: 50px;
+  margin-top: 15px;
+  margin-left: 15px;
+  float: left;
+}
+
+nav image {
+  float: left;
+}
+
+nav a {
+  float: right;
+  margin: 10px;
+}
+
+.nav-right-side {
+  display: inline;
+  float: right;
+}
+
+.sign-out-div {
+  display: inline;
+  float: right;
+  margin-right: 30px;
 }
 
 .sign-up-div,
 .sign-in-div,
-.change-password-form-div {
-  padding: 100px 0;
-  height: 550px;
-  background-color: rgba(0, 0, 0, .5);
-  text-align: center;
+.change-password-form-div,
+ {
+   padding-top: 30vh;
 }
 
 .sign-up-form input,
@@ -98,16 +124,15 @@ body {
   width: 400px;
 }
 
-nav span {
-  margin: 0 10px;
+.welcome-message {
+  margin-top: 10vh;
+  text-align: center;
 }
 
-nav {
-  float: right;
+.welcome-message h1 {
+  font-size: 50px;
 }
 
-.sign-out-div {
-  display: inline;
-  float: right;
-  margin-right: 30px;
+.goal-div {
+  background-color: rgba(0, 0, 0, 0.7);
 }

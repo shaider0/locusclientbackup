@@ -12,16 +12,46 @@ const signUpFailure = function (formData) {
 
 const signInSuccess = function (formData) {
   store.user = formData.user
+  $('form').trigger('reset')
+  $('.title').hide()
+  $('.tagline').hide()
+  $('.go-back').hide()
+  $('.show-sign-up').hide()
+  $('.show-sign-in').hide()
   $('.sign-up-div').hide()
   $('.sign-in-div').hide()
-  $('.change-password-button-div').show()
-  $('.change-password-form-div').hide()
-  $('.sign-out-div').show()
+  $('nav').show()
+  $('.main-overlay').prepend($('nav'))
+  $('.welcome-message').show()
+  $('.main-overlay').append($('.welcome-message'))
+}
+
+const signOutSuccess = function () {
+  store.user = null
+  $('form').trigger('reset')
+  $('nav').hide()
+  $('.welcome-message').hide()
+  $('.title').show()
+  $('.tagline').show()
+  $('.show-sign-up').show()
+  $('.show-sign-in').show()
+  $('.goal-div').hide()
+
+  // $('.logo').show()
+  // $('.logo-overlay').show()
+  // $('main').hide()
+  // $('.show-sign-up').show()
+  // $('.show-sign-in').show()
+  // $('.sign-up-display').text('')
+  // $('.sign-in-display').text('')
+  // $('.change-password-display').text('')
+  // $('.sign-out-display').text('')
+  // $('.tagline').text('See you later, Sam!')
 }
 
 const signInFailure = function (formData) {
-  $('.sign-in-display').text('Please try again')
   $('form').trigger('reset')
+  $('.sign-in-display').text('Please try again')
 }
 
 const showChangePasswordForm = function () {
@@ -41,19 +71,6 @@ const changePwSuccess = function () {
 const changePwFailure = function () {
   $('.change-password-display').text('Something went wrong. Please try again.')
   $('form').trigger('reset')
-}
-
-const signOutSuccess = function () {
-  store.user = null
-  $('form').trigger('reset')
-  $('.change-password-button-div').hide()
-  $('.change-password-form-div').hide()
-  $('.sign-out-div').hide()
-
-  $('.sign-up-display').text('')
-  $('.sign-in-display').text('')
-  $('.change-password-display').text('')
-  $('.sign-out-display').text('')
 }
 
 const signOutFailure = function () {
