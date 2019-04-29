@@ -30,7 +30,7 @@ const onDeleteGoal = (event) => {
   if (event.target.matches('.delete-goal')) {
     const id = $(event.target).data('id')
     api.deleteGoal(id)
-      .then(ui.deleteGoalSuccess)
+      .then(onGetGoals)
       .catch(ui.failure)
   }
 }
@@ -39,7 +39,7 @@ const onUpdateGoal = (event) => {
   event.preventDefault()
   const formData = getFormFields(event.target)
   api.updateGoal(formData)
-    .then(ui.updateGoalSuccess)
+    .then(onGetGoals)
     .catch(ui.failure)
 }
 

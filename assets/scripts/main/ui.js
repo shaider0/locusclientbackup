@@ -10,22 +10,10 @@ const getGoalsSuccess = (data) => {
   $('.goal-div').show()
 }
 
-const createGoalSuccess = () => {
-  console.log('goal created')
-}
-
 const getGoalSuccess = (data) => {
   $('.welcome-message').hide()
   const showGoalHtml = showGoalTemplate({ goal: data.goal })
   $('.content').html(showGoalHtml)
-}
-
-const deleteGoalSuccess = () => {
-  console.log('goal deleted')
-}
-
-const updateGoalSuccess = () => {
-  console.log('goal updated')
 }
 
 const failure = () => {
@@ -35,8 +23,5 @@ const failure = () => {
 module.exports = {
   getGoalsSuccess,
   failure,
-  createGoalSuccess,
-  getGoalSuccess,
-  deleteGoalSuccess,
-  updateGoalSuccess
+  getGoalSuccess
 }
