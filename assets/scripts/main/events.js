@@ -2,8 +2,7 @@ const api = require('./api.js')
 const ui = require('./ui.js')
 const getFormFields = require('./../../../lib/get-form-fields.js')
 
-const onGetGoals = (event) => {
-  event.preventDefault()
+const onGetGoals = () => {
   api.getGoals()
     .then(ui.getGoalsSuccess)
     .catch(ui.failure)
@@ -14,8 +13,8 @@ const onCreateGoal = (event) => {
   const formData = getFormFields(event.target)
   console.log('form data: ', formData)
   api.createGoal(formData)
-    .then(ui.createGoalSuccess)
-    .catch(console.log('something went wrong with create goal'))
+    .then(onGetGoals)
+    .catch(ui.failure)
 }
 
 const onGetGoal = (event) => {
