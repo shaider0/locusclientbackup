@@ -12,7 +12,6 @@ $(() => {
   mainEvents.addHandlers()
   authEvents.addHandlers()
   $('nav').hide()
-  $('.welcome-message').hide()
   $('.go-back').hide()
   $('.sign-up-div').hide()
   $('.sign-in-div').hide()

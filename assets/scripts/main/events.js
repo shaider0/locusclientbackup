@@ -51,6 +51,7 @@ const onShowSignUp = () => {
   $('.title').hide()
   $('.tagline').hide()
   $('.main-overlay').prepend(signUp)
+  $('.message-display').text('')
 }
 
 const onShowSignIn = () => {
@@ -61,12 +62,14 @@ const onShowSignIn = () => {
   $('.title').hide()
   $('.tagline').hide()
   $('.main-overlay').prepend(signIn)
+  $('.message-display').text('')
 }
 
 const onSettings = () => {
   const changePwForm = $('.change-password-form-div')
   changePwForm.show()
   $('nav').hide()
+  $('.goal-div').hide()
   $('.main-overlay').prepend(changePwForm)
 }
 

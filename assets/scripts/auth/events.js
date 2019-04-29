@@ -9,7 +9,7 @@ const onSignUp = function (event) {
   const formData = getFormFields(event.target)
   api.signUp(formData)
     .then(ui.signUpSuccess)
-    .catch(ui.signUpFailure)
+    .catch(ui.failure)
 }
 
 const onSignIn = function (event) {
@@ -17,7 +17,7 @@ const onSignIn = function (event) {
   const formData = getFormFields(event.target)
   api.signIn(formData)
     .then(ui.signInSuccess)
-    .catch(ui.signInFailure)
+    .catch(ui.failure)
 }
 
 const onShowChangePasswordForm = function () {
@@ -30,7 +30,7 @@ const onChangePasswordForm = function (event) {
   const formData = getFormFields(event.target)
   api.changePassword(formData)
     .then(ui.changePwSuccess)
-    .catch(ui.changePwFailure)
+    .catch(ui.failure)
 }
 
 const onSignOut = function (event) {
@@ -38,14 +38,14 @@ const onSignOut = function (event) {
 
   api.signOut()
     .then(ui.signOutSuccess)
-    .catch(ui.signOutFailure)
+    .catch(ui.failure)
 }
 
 const addHandlers = function () {
   $('.sign-up-form').on('submit', onSignUp)
   $('.sign-in-form').on('submit', onSignIn)
   $('.show-change-password-form').on('click', onShowChangePasswordForm)
-  $('.change-password-form-div').on('submit', onChangePasswordForm)
+  $('.change-password-form').on('submit', onChangePasswordForm)
   $('.sign-out').on('submit', onSignOut)
 }
 

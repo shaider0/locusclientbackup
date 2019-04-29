@@ -5,11 +5,6 @@ const signUpSuccess = function (formData) {
   $('.sign-up-display').text('New account created! Please sign in below.')
 }
 
-const signUpFailure = function (formData) {
-  $('form').trigger('reset')
-  $('.sign-up-display').text('Something went wrong. Please try again.')
-}
-
 const signInSuccess = function (formData) {
   store.user = formData.user
   $('form').trigger('reset')
@@ -22,20 +17,19 @@ const signInSuccess = function (formData) {
   $('.sign-in-div').hide()
   $('nav').show()
   $('.main-overlay').prepend($('nav'))
-  $('.welcome-message').show()
-  $('.main-overlay').append($('.welcome-message'))
+  $('.message-display').text('')
 }
 
 const signOutSuccess = function () {
   store.user = null
   $('form').trigger('reset')
   $('nav').hide()
-  $('.welcome-message').hide()
   $('.title').show()
   $('.tagline').show()
   $('.show-sign-up').show()
   $('.show-sign-in').show()
   $('.goal-div').hide()
+  $('.message-display').text('')
 
   // $('.logo').show()
   // $('.logo-overlay').show()
@@ -49,42 +43,29 @@ const signOutSuccess = function () {
   // $('.tagline').text('See you later, Sam!')
 }
 
-const signInFailure = function (formData) {
-  $('form').trigger('reset')
-  $('.sign-in-display').text('Please try again')
-}
-
-const showChangePasswordForm = function () {
-  $('.change-password-form-div').show()
-}
-
 const changePwSuccess = function () {
-  $('.change-password-display').text('Password changed!')
+  $('.message-display').text('Password changed!')
+
+  const clearText = () => {
+    $('.message-display').text('')
+  }
+
+  setTimeout(clearText, 3000)
+
   $('.change-password-form-div').hide()
   $('form').trigger('reset')
-  setTimeout(function () {
-    $('.change-password-display').text('')
-  }, 2000
-  )
+  $('nav').show()
 }
 
-const changePwFailure = function () {
-  $('.change-password-display').text('Something went wrong. Please try again.')
+const failure = function () {
+  $('.message-display').text('Something went wrong. Please try again.')
   $('form').trigger('reset')
-}
-
-const signOutFailure = function () {
-  $('.sign-out-display').text('Please try again later')
 }
 
 module.exports = {
   signInSuccess,
-  signInFailure,
   signUpSuccess,
-  signUpFailure,
-  showChangePasswordForm,
   changePwSuccess,
-  changePwFailure,
   signOutSuccess,
-  signOutFailure
+  failure
 }

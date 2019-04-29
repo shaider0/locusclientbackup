@@ -124,15 +124,13 @@ nav a {
   width: 400px;
 }
 
-.welcome-message {
-  margin-top: 10vh;
-  text-align: center;
-}
-
-.welcome-message h1 {
-  font-size: 50px;
-}
-
 .goal-div {
   background-color: rgba(0, 0, 0, 0.7);
+  width: 50vw;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.goal {
+  border: 1px solid grey;
 }

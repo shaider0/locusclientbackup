@@ -11,7 +11,6 @@ const getGoalsSuccess = (data) => {
 }
 
 const getGoalSuccess = (data) => {
-  $('.welcome-message').hide()
   const showGoalHtml = showGoalTemplate({ goal: data.goal })
   $('.content').html(showGoalHtml)
 }

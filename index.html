@@ -18,6 +18,7 @@
     <!-- main container -->
       <div class="main-container">
         <div class="main-overlay">
+          <div class="message-display"></div>
             <div class="title">
               <span class="l">L</span>
               <span class="o">O</span>
@@ -32,9 +33,6 @@
         </div>
       </div>
 
-      <div class="welcome-message">
-        <h1>Welcome, Sam!</h1>
-      </div>
 
       <!-- navbar (only shown when logged in) -->
       <nav>
@@ -47,9 +45,9 @@
             </form>
           </div>
           <span><a class="settings" href="#">Settings</a></span>
-          <span><a href="#">Resources</a></span>
+          <!-- <span><a href="#">Resources</a></span>
           <span><a href="#">Schedule</a></span>
-          <span><a href="#">Tasks</a></span>
+          <span><a href="#">Tasks</a></span> -->
           <span><a class ="get-goals" href="#">Goals</a></span>
         </div>
       </nav>
@@ -83,11 +81,9 @@
           <h4>Change Password</h4>
           <input type="password" name="passwords[old]" placeholder="current password">
           <input type="password" name="passwords[new]" placeholder="new password">
-          <input class="c btn btn-dark" type="submit" value="Change password now">
+          <input class="btn btn-dark" type="submit" value="Change password now">
         </form>
       </div>
-
-      <div class="error-display"></div>
 
     <div class="goal-div">
       <div class="create-goal-div">
@@ -98,7 +94,6 @@
           <input class="btn btn-primary" type="submit" value="add">
         </form>
       </div>
-
       <div class="get-goal-div">
         <form class="get-goal-form">
           <h3>Get Goal</h3>
@@ -106,7 +101,6 @@
           <input class="btn btn-primary" type="submit" value="find">
         </form>
     </div>
-
       <div class="update-goal-div">
         <form class="update-goal-form">
           <h3>Update Goal</h3>
@@ -115,13 +109,10 @@
           <input type="text" name="goal[description]" placeholder="description">
           <input class="btn btn-primary" type="submit" value="update">
         </form>
+        <div class="content">
+        </div>
+      </div>
     </div>
-
-    <div class="content">
-    </div>
-
-  </div>
-
 
   </body>
 </html>
