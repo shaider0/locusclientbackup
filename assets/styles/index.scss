@@ -122,20 +122,42 @@ nav a {
   margin: 4px auto;
   padding: 5px;
   display: block;
-  width: 400px;
+  width: 30vw;
+}
+
+.create-goal-form input,
+.update-goal-form input,
+.get-goal-form input {
+  margin: 2px auto;
+  padding: 2px;
+  display: block;
+  width: 50vw;
 }
 
 .goal-div {
   background-color: rgba(0, 0, 0, 0.7);
-  width: 50vw;
-  margin: 0 auto;
+  border-radius: 5px;
+  width: 70vw;
+  margin: 20px auto;
   text-align: left;
   padding: 15px;
 }
 
 .goal {
   border: 1px solid grey;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
 }
+
+.goals-template-header {
+  padding-top: 30px;
+}
+.form-header {
+  padding-top: 30px;
+}
+
+
 
 .message-display {
   // position: fixed;
