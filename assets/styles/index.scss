@@ -10,8 +10,6 @@ body {
   color: white;
 }
 
-// main-container
-
 .main-container {
   width: 100vw;
   height: 100vh;
@@ -74,13 +72,12 @@ body {
   color: white;
 }
 
-// navbar
-
 nav {
   height: 50px;
   padding-top: 5px;
   background-color: black;
 }
+
 .logo {
   height: 35px;
   width: 42px;
@@ -166,10 +163,6 @@ nav a {
   font-size: 20px;
 }
 
-td {
-  // border: 2px solid white;
-}
-
 .id-col {
   width: 40px;
 }
@@ -235,6 +228,7 @@ td {
 .welcome-message {
   margin-top: 45vh;
 }
+
 .welcome-message a {
   color: white;
   font-size: 24px;
