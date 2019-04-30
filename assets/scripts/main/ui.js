@@ -7,10 +7,10 @@ const getGoalsSuccess = (data) => {
   $('form').trigger('reset')
   $('.main-overlay').append($('.goal-div'))
   $('.goal-div').show()
-  if (data.length) {
-    const showGoalsHtml = showGoalsTemplate({ goals: data.goals })
-    $('.content').html(showGoalsHtml)
-  } else {
+  const showGoalsHtml = showGoalsTemplate({ goals: data.goals })
+  $('.content').html(showGoalsHtml)
+
+  if (!data.goals.length) {
     $('.content').text('No goals found. Create a new one now!')
     const clearNoGoals = () => {
       $('.content').text('')
