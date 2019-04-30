@@ -130,7 +130,7 @@ nav a {
   margin: 4px auto;
   padding: 5px;
   display: block;
-  width: 30vw;
+  width: 350px;
 }
 
 .create-goal-form input,
@@ -139,14 +139,14 @@ nav a {
   margin: 2px auto;
   padding: 2px;
   display: block;
-  width: 30vw;
+  width: 350px;
 }
 
 .goal-div {
   background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 5px;
-  width: 40vw;
-  margin: 20px auto;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
   text-align: left;
   padding: 15px;
 }
@@ -161,17 +161,82 @@ nav a {
 .goals-template-header {
   padding-top: 30px;
 }
-.form-header {
-  padding-top: 30px;
-}
-
-
 
 .message-display {
-  // position: fixed;
-  // bottom: 10vh;
-  // left: 38vw;
-  // border: 3px solid #73AD21;
-  // width: 300px;
   font-size: 20px;
+}
+
+td {
+  // border: 2px solid white;
+}
+
+.id-col {
+  width: 40px;
+}
+
+.title-col {
+  width: 400px;
+  border-left: 1px solid grey;
+  padding-left: 15px;
+}
+
+.description-col {
+  width: 800px;
+  border-left: 1px solid grey;
+  padding-left: 15px;
+}
+
+.id-header {
+  width: 55px;
+  padding-left: 17px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.title-header {
+  width: 400px;
+  padding-left: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.description-header {
+  width: 800px;
+  padding-left: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.remove-btn {
+  font-size: 14px;
+  padding: 1px 2px;
+  background-color: transparent;
+  color: white;
+}
+
+.create-btn,
+.show-btn,
+.update-btn {
+  background-color: transparent;
+  color: white;
+}
+
+.create-goal-form h3,
+.get-goal-form h3,
+.update-goal-form h3 {
+  text-align: center;
+}
+
+.goal-forms {
+  display: flex;
+  justify-content: space-around;
+}
+
+.welcome-message {
+  margin-top: 45vh;
+}
+.welcome-message a {
+  color: white;
+  font-size: 24px;
+  font-family: 'IM Fell Double Pica', serif;
 }

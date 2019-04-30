@@ -1,22 +1,28 @@
 <h3 class="goals-template-header">Current Goals: </h3>
-  {{#each goals as |goal|}}
-    <section class="goal" data-id="{{goal.id}}">
-      <p>ID:
-        {{goal.id}}
-      <p>
-      <h4>Title:</h4>
-      <p>
-        {{goal.title}}
-      <p>
 
-      <h4>Description:</h4>
-      <p>
-        {{#if goal.description}}
-          {{goal.description}}
-        {{else}}
-          No description provided.
-        {{/if}}
-      </p>
-      <button data-id="{{goal.id}}" class="btn btn-danger delete-goal">Remove</button>
-    </section>
-    {{/each}}
+<table>
+  <tr>
+    <td class="id-header">ID</td>
+    <td class="title-header">Title</td>
+    <td class="description-header">Description</td>
+  </tr>
+</table>
+
+{{#each goals as |goal|}}
+  <section class="goal" data-id="{{goal.id}}">
+    <table>
+      <tr>
+        <td class="id-col">{{goal.id}}</td>
+        <td class="title-col">{{goal.title}}</td>
+        <td class="description-col">
+          {{#if goal.description}}
+            {{goal.description}}
+          {{else}}
+            No description provided.
+          {{/if}}
+        </td>
+      </tr>
+    </table>
+    <button data-id="{{goal.id}}" class="btn btn-info remove-btn delete-goal">Remove</button>
+  </section>
+{{/each}}

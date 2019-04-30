@@ -5,6 +5,7 @@ const showGoalTemplate = require('../templates/goal-listing-single.handlebars')
 
 const getGoalsSuccess = (data) => {
   $('form').trigger('reset')
+  $('.welcome-message').hide()
   $('.main-overlay').append($('.goal-div'))
   $('.goal-div').show()
   const showGoalsHtml = showGoalsTemplate({ goals: data.goals })

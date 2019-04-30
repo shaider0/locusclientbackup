@@ -1,4 +1,4 @@
-<h3 class="goals-template-header">Goals</h3>
+<!-- <h3 class="goals-template-header">Goals</h3>
   <section data-id="{{goal.id}}">
     <p>ID:
       {{goal.id}}
@@ -17,4 +17,32 @@
       {{/if}}
     </p>
     <button data-id="{{goal.id}}" class="btn btn-danger delete-goal">Remove</button>
-  </section>
+  </section> -->
+
+
+  <h3 class="goals-template-header">Selected Goal: </h3>
+
+  <table>
+    <tr>
+      <td class="id-header">ID</td>
+      <td class="title-header">Title</td>
+      <td class="description-header">Description</td>
+    </tr>
+  </table>
+
+    <section class="goal" data-id="{{goal.id}}">
+      <table>
+        <tr>
+          <td class="id-col">{{goal.id}}</td>
+          <td class="title-col">{{goal.title}}</td>
+          <td class="description-col">
+            {{#if goal.description}}
+              {{goal.description}}
+            {{else}}
+              No description provided.
+            {{/if}}
+          </td>
+        </tr>
+      </table>
+      <button data-id="{{goal.id}}" class="btn btn-info remove-btn delete-goal">Remove</button>
+    </section>

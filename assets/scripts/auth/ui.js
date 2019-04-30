@@ -19,6 +19,7 @@ const signInSuccess = function (formData) {
   $('.main-overlay').prepend($('nav'))
   $('.message-display').text('')
   $('.main-container').css('background-image', 'url("https://images.unsplash.com/photo-1555985202-12975b0235dc?ixlib=rb-1.2.1&auto=format&fit=crop&w=2549&q=80")')
+  $('.welcome-message').show()
 }
 
 const signOutSuccess = function () {
@@ -31,6 +32,7 @@ const signOutSuccess = function () {
   $('.show-sign-in').show()
   $('.goal-div').hide()
   $('.message-display').text('')
+  $('.welcome-message').hide()
   $('.main-container').css('background-image', 'url("https://images.unsplash.com/photo-1528818955841-a7f1425131b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2689&q=80")')
 
   // $('.logo').show()
@@ -63,6 +65,7 @@ const changePwSuccess = function () {
 
   const show = () => {
     $('nav').show()
+    $('.welcome-message').show()
   }
   setTimeout(show, 3000)
 }

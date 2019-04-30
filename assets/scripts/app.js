@@ -19,4 +19,5 @@ $(() => {
   $('.change-password-form-div').hide()
   $('.error-display').hide()
   $('.goal-div').hide()
+  $('.welcome-message').hide()
 })

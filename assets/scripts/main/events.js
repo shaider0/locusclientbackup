@@ -67,6 +67,7 @@ const onShowSignIn = () => {
 
 const onSettings = () => {
   const changePwForm = $('.change-password-form-div')
+  $('.welcome-message').hide()
   changePwForm.show()
   $('nav').hide()
   $('.goal-div').hide()
@@ -77,6 +78,7 @@ const onCancel = () => {
   const changePwForm = $('.change-password-form-div')
   changePwForm.hide()
   $('nav').show()
+  $('.welcome-message').show()
 }
 
 const onGoBack = () => {
@@ -92,6 +94,7 @@ const onGoBack = () => {
 const onLogo = () => {
   $('.goal-div').hide()
   $('form').trigger('reset')
+  $('.welcome-message').show()
 }
 
 const addHandlers = () => {

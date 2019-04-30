@@ -6,6 +6,7 @@
 
     <!-- Do not add `link` tags-->
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=IM+Fell+Double+Pica:400i" rel="stylesheet">
 
     <!-- Do not add `script` tags-->
     <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
@@ -47,6 +48,9 @@
             <span class="go-back"><a href="#">Go Back</a></span>
             <span class="show-sign-up"><a href="#">Sign Up</a></span>
             <span class="show-sign-in"><a href="#">Sign In</a></span>
+            <div class="welcome-message">
+              <a href="https://en.wikipedia.org/wiki/Pareto_principle" target="_blank">80 percent of all effects come from 20 percent of causes</a>
+            </div>
         </div>
       </div>
 
@@ -85,33 +89,39 @@
       </div>
 
     <div class="goal-div">
+      <div class="goal-forms">
       <div class="create-goal-div">
         <form class="create-goal-form">
           <h3>Create a New Goal</h3>
           <input required type="text" name="goal[title]" placeholder="title">
           <input type="text" name="goal[description]" placeholder="description">
-          <input class="btn btn-info" type="submit" value="add">
+          <input class="btn btn-info create-btn" type="submit" value="add">
         </form>
       </div>
-      <div class="get-goal-div form-header">
+
+      <div class="get-goal-div">
         <form class="get-goal-form">
           <h3>Find a Goal</h3>
           <input required type="number" name="goal[id]" placeholder="goal id">
-          <input class="btn btn-info" type="submit" value="find">
+          <input class="btn btn-info show-btn" type="submit" value="find">
         </form>
     </div>
-      <div class="update-goal-div form-header">
+
+      <div class="update-goal-div">
         <form class="update-goal-form">
           <h3>Update an Existing Goal</h3>
           <input required type="number" name="goal[id]" placeholder="goal id">
           <input type="text" name="goal[title]" placeholder="title">
           <input type="text" name="goal[description]" placeholder="description">
-          <input class="btn btn-info" type="submit" value="update">
+          <input class="btn btn-info update-btn" type="submit" value="update">
         </form>
-        <div class="content">
-        </div>
       </div>
     </div>
+    <div class="content">
+    </div>
+  </div>
+
+
 
   </body>
 </html>
