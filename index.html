@@ -13,115 +13,104 @@
     <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
   </head>
 
-  <!-- body -->
   <body>
-
-    <!-- main container -->
-      <div class="main-container">
-        <div class="main-overlay">
-          <!-- navbar (only shown when logged in) -->
-          <nav>
-            <img class="logo" alt="logo" src="./public/logo.png">
-            <div class="nav-right-side">
-              <div class="sign-out-div">
-                <form class="sign-out">
-                  <input class="sign-out-btn" type="submit" value="Sign Out">
-                </form>
-              </div>
-              <span><a class="settings" href="#">Settings</a></span>
-              <!-- <span><a href="#">Resources</a></span>
-              <span><a href="#">Schedule</a></span>
-              <span><a href="#">Tasks</a></span> -->
-              <span><a class ="get-goals" href="#">Goals</a></span>
+    <div class="main-container">
+      <div class="main-overlay">
+        <nav>
+          <img class="logo" alt="logo" src="./public/logo.png">
+          <div class="nav-right-side">
+            <div class="sign-out-div">
+              <form class="sign-out">
+                <input class="sign-out-btn" type="submit" value="Sign Out">
+              </form>
             </div>
-          </nav>
-
-          <div class="message-display"></div>
-            <div class="title">
-              <span class="l">L</span>
-              <span class="o">O</span>
-              <span class="c">C</span>
-              <span class="u">U</span>
-              <span class="s">S</span>
-            </div>
-            <p class="tagline">Simply productive</p>
-            <span class="go-back"><a href="#">Go Back</a></span>
-            <span class="show-sign-up"><a href="#">Sign Up</a></span>
-            <span class="show-sign-in"><a href="#">Sign In</a></span>
-            <div class="welcome-message">
-              <a href="https://en.wikipedia.org/wiki/Pareto_principle" target="_blank">80 percent of all effects come from 20 percent of causes</a>
-            </div>
-        </div>
+            <span><a class="settings" href="#">Settings</a></span>
+            <!-- <span><a href="#">Resources</a></span>
+            <span><a href="#">Schedule</a></span>
+            <span><a href="#">Tasks</a></span> -->
+            <span><a class ="get-goals" href="#">Goals</a></span>
+          </div>
+        </nav>
+        <div class="message-display"></div>
+          <div class="title">
+            <span class="l">L</span>
+            <span class="o">O</span>
+            <span class="c">C</span>
+            <span class="u">U</span>
+            <span class="s">S</span>
+          </div>
+          <p class="tagline">Simply productive</p>
+          <span class="go-back"><a href="#">Go Back</a></span>
+          <span class="show-sign-up"><a href="#">Sign Up</a></span>
+          <span class="show-sign-in"><a href="#">Sign In</a></span>
+          <div class="welcome-message">
+            <a href="https://en.wikipedia.org/wiki/Pareto_principle" target="_blank">80 percent of all effects come from 20 percent of causes</a>
+          </div>
       </div>
-
-        <!--SIGN UP-->
-        <div class=sign-up-div>
-          <form class="sign-up-form">
-            <h4>Sign Up Form</h4>
-            <input required type="email" name="credentials[email]" placeholder="Email">
-            <input required type="password" name="credentials[password]" placeholder="Password">
-            <input required type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-            <input class="btn btn-dark" type="submit" value="Sign Up Now!">
-            <p class="sign-up-display"></p>
-          </form>
-        </div>
-
-        <!--SIGN IN-->
-        <div class="sign-in-div">
-          <form class="sign-in-form">
-            <h4>Sign In</h4>
-            <input required class="" type="email" name="credentials[email]" placeholder="Email">
-            <input required class="" type="password" name="credentials[password]" placeholder="Password">
-            <input class="btn btn-dark" type="submit" value="Sign in!">
-            <p class="sign-in-display"></p>
-          </form>
-        </div>
-
-      <!--CHANGE PW FORM-->
-      <div class="change-password-form-div">
-        <form class="change-password-form">
-          <h4>Change Password</h4>
-          <input type="password" name="passwords[old]" placeholder="current password">
-          <input type="password" name="passwords[new]" placeholder="new password">
-          <input class="btn btn-dark" type="submit" value="Change password now">
-          <a class="cancel" href="#">Cancel</a>
-        </form>
-      </div>
+    </div>
 
     <div class="goal-div">
       <div class="goal-forms">
-      <div class="create-goal-div">
-        <form class="create-goal-form">
-          <h3>Create a New Goal</h3>
-          <input required type="text" name="goal[title]" placeholder="title">
-          <input type="text" name="goal[description]" placeholder="description">
-          <input class="btn btn-info create-btn" type="submit" value="add">
-        </form>
+        <div class="create-goal-div">
+          <form class="create-goal-form">
+            <h3>Create a New Goal</h3>
+            <input required type="text" name="goal[title]" placeholder="title">
+            <input type="text" name="goal[description]" placeholder="description">
+            <input class="btn btn-info create-btn" type="submit" value="add">
+          </form>
+        </div>
+
+        <div class="get-goal-div">
+          <form class="get-goal-form">
+            <h3>Find a Goal</h3>
+            <input required type="number" name="goal[id]" placeholder="goal id">
+            <input class="btn btn-info show-btn" type="submit" value="find">
+          </form>
+        </div>
+
+        <div class="update-goal-div">
+          <form class="update-goal-form">
+            <h3>Update an Existing Goal</h3>
+            <input required type="number" name="goal[id]" placeholder="goal id">
+            <input type="text" name="goal[title]" placeholder="title">
+            <input type="text" name="goal[description]" placeholder="description">
+            <input class="btn btn-info update-btn" type="submit" value="update">
+          </form>
+        </div>
       </div>
-
-      <div class="get-goal-div">
-        <form class="get-goal-form">
-          <h3>Find a Goal</h3>
-          <input required type="number" name="goal[id]" placeholder="goal id">
-          <input class="btn btn-info show-btn" type="submit" value="find">
-        </form>
-    </div>
-
-      <div class="update-goal-div">
-        <form class="update-goal-form">
-          <h3>Update an Existing Goal</h3>
-          <input required type="number" name="goal[id]" placeholder="goal id">
-          <input type="text" name="goal[title]" placeholder="title">
-          <input type="text" name="goal[description]" placeholder="description">
-          <input class="btn btn-info update-btn" type="submit" value="update">
-        </form>
+      <div class="content">
       </div>
     </div>
-    <div class="content">
+
+<!--Auth-->
+    <div class=sign-up-div>
+      <form class="sign-up-form">
+        <h4>Sign Up Form</h4>
+        <input required type="email" name="credentials[email]" placeholder="Email">
+        <input required type="password" name="credentials[password]" placeholder="Password">
+        <input required type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+        <input class="btn btn-dark" type="submit" value="Sign Up Now!">
+        <p class="sign-up-display"></p>
+      </form>
     </div>
-  </div>
-
-
+    <div class="sign-in-div">
+      <form class="sign-in-form">
+        <h4>Sign In</h4>
+        <input required class="" type="email" name="credentials[email]" placeholder="Email">
+        <input required class="" type="password" name="credentials[password]" placeholder="Password">
+        <input class="btn btn-dark" type="submit" value="Sign in!">
+        <p class="sign-in-display"></p>
+      </form>
+    </div>
+    <div class="change-password-form-div">
+      <form class="change-password-form">
+        <h4>Change Password</h4>
+        <input type="password" name="passwords[old]" placeholder="current password">
+        <input type="password" name="passwords[new]" placeholder="new password">
+        <input class="btn btn-dark" type="submit" value="Change password now">
+        <a class="cancel" href="#">Cancel</a>
+      </form>
+    </div>
 
   </body>
 </html>
