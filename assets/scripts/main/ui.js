@@ -4,11 +4,19 @@ const showGoalsTemplate = require('../templates/goal-listing.handlebars')
 const showGoalTemplate = require('../templates/goal-listing-single.handlebars')
 
 const getGoalsSuccess = (data) => {
-  const showGoalsHtml = showGoalsTemplate({ goals: data.goals })
   $('form').trigger('reset')
-  $('.content').html(showGoalsHtml)
   $('.main-overlay').append($('.goal-div'))
   $('.goal-div').show()
+  if (data.length) {
+    const showGoalsHtml = showGoalsTemplate({ goals: data.goals })
+    $('.content').html(showGoalsHtml)
+  } else {
+    $('.content').text('No goals found. Create a new one now!')
+    const clearNoGoals = () => {
+      $('.content').text('')
+    }
+    setTimeout(clearNoGoals, 3000)
+  }
 }
 
 const getGoalSuccess = (data) => {

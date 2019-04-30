@@ -24,8 +24,7 @@
             <div class="nav-right-side">
               <div class="sign-out-div">
                 <form class="sign-out">
-                  <input class="btn btn-dark" type="submit" value="Sign Out!">
-                  <p class="sign-out-display"></p>
+                  <input class="sign-out-btn" type="submit" value="Sign Out">
                 </form>
               </div>
               <span><a class="settings" href="#">Settings</a></span>
@@ -89,7 +88,7 @@
       <div class="create-goal-div">
         <form class="create-goal-form">
           <h3>Create a New Goal</h3>
-          <input type="text" name="goal[title]" placeholder="title">
+          <input required type="text" name="goal[title]" placeholder="title">
           <input type="text" name="goal[description]" placeholder="description">
           <input class="btn btn-info" type="submit" value="add">
         </form>
@@ -97,14 +96,14 @@
       <div class="get-goal-div form-header">
         <form class="get-goal-form">
           <h3>Find a Goal</h3>
-          <input type="number" name="goal[id]" placeholder="goal id">
+          <input required type="number" name="goal[id]" placeholder="goal id">
           <input class="btn btn-info" type="submit" value="find">
         </form>
     </div>
       <div class="update-goal-div form-header">
         <form class="update-goal-form">
           <h3>Update an Existing Goal</h3>
-          <input type="number" name="goal[id]" placeholder="goal id">
+          <input required type="number" name="goal[id]" placeholder="goal id">
           <input type="text" name="goal[title]" placeholder="title">
           <input type="text" name="goal[description]" placeholder="description">
           <input class="btn btn-info" type="submit" value="update">

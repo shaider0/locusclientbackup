@@ -58,7 +58,7 @@ body {
 }
 
 .show-sign-up, .show-sign-in {
-  font-size: 23px;
+  font-size: 16px;
   line-height: 160px;
   margin: 0 40px;
   padding: 12px;
@@ -77,11 +77,12 @@ body {
 // navbar
 
 nav {
-  height: 40px;
-  padding-top: 20px;
+  height: 50px;
+  padding-top: 5px;
+  background-color: black;
 }
 .logo {
-  height: 40px;
+  height: 35px;
   width: 42px;
   margin-left: 15px;
   float: left;
@@ -95,7 +96,7 @@ nav image {
 
 nav a {
   float: right;
-  margin: 10px;
+  margin: 7px 10px;
 }
 
 .nav-right-side {
@@ -107,6 +108,13 @@ nav a {
   display: inline;
   float: right;
   margin-right: 30px;
+}
+
+.sign-out-btn {
+  background-color: transparent;
+  color: #007bff;
+  border: none;
+  margin: 7px 10px;
 }
 
 .sign-up-div,
@@ -131,13 +139,13 @@ nav a {
   margin: 2px auto;
   padding: 2px;
   display: block;
-  width: 50vw;
+  width: 30vw;
 }
 
 .goal-div {
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 5px;
-  width: 70vw;
+  width: 40vw;
   margin: 20px auto;
   text-align: left;
   padding: 15px;
