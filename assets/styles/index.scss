@@ -8,16 +8,18 @@
 body {
   background-color: black;
   color: white;
+  font-family: 'Poiret One', serif;
+  font-weight: bold;
 }
 
-.main-container {
+.background {
   width: 100vw;
   height: 100vh;
   background-image: url('https://images.unsplash.com/photo-1528818955841-a7f1425131b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2689&q=80');
   background-size: cover;
 }
 
-.main-overlay {
+.overlay {
   text-align: center;
   height: 100vh;
   width: 100vw;
@@ -26,7 +28,7 @@ body {
 
 .title {
   font-size: 100px;
-  font-family: helvetica;
+  // font-family: helvetica;
   padding-top: 30vh;
 }
 
@@ -55,6 +57,10 @@ body {
   font-size: 25px;
 }
 
+.go-back a {
+  color: white;
+}
+
 .show-sign-up, .show-sign-in {
   font-size: 16px;
   line-height: 160px;
@@ -68,8 +74,20 @@ body {
   color: #dcd7ff;
 }
 
-.go-back a {
-  color: white;
+.sign-up-form,
+.sign-in-form,
+.change-password-form,
+ {
+   padding-top: 30vh;
+}
+
+.sign-up-form input,
+.sign-in-form input,
+.change-password-form input {
+  margin: 4px auto;
+  padding: 5px;
+  display: block;
+  width: 350px;
 }
 
 nav {
@@ -79,70 +97,37 @@ nav {
 }
 
 .logo {
-  height: 35px;
-  width: 42px;
-  margin-left: 15px;
+  height: 25px;
+  width: 30px;
+  margin: 7px;
   float: left;
   cursor: pointer;
-  border-radius: 25px;
 }
 
-nav image {
+nav img {
   float: left;
 }
 
-nav a {
+nav a, nav form input{
   float: right;
   margin: 7px 10px;
-}
-
-.nav-right-side {
-  display: inline;
-  float: right;
-}
-
-.sign-out-div {
-  display: inline;
-  float: right;
-  margin-right: 30px;
+  color: #17a2b8
 }
 
 .sign-out-btn {
   background-color: transparent;
-  color: #007bff;
   border: none;
   margin: 7px 10px;
 }
 
-.sign-up-div,
-.sign-in-div,
-.change-password-form-div,
- {
-   padding-top: 30vh;
+.content {
+  background-color: #061617;
 }
 
-.sign-up-form input,
-.sign-in-form input,
-.change-password-form-div input {
-  margin: 4px auto;
-  padding: 5px;
-  display: block;
-  width: 350px;
-}
-
-.create-goal-form input,
-.update-goal-form input,
-.get-goal-form input {
-  margin: 2px auto;
-  padding: 2px;
-  display: block;
-  width: 350px;
-}
-
-.goal-div {
+.goal-forms {
   background-color: rgba(0, 0, 0, 0.7);
   width: 100vw;
-  height: 100vh;
+  height: 100px;
   margin: 0 auto;
   text-align: left;
   padding: 15px;
@@ -153,6 +138,8 @@ nav a {
   border-radius: 5px;
   padding: 10px;
   margin: 5px;
+  color: white;
+  font-size: 20px
 }
 
 .goals-template-header {
@@ -226,11 +213,13 @@ nav a {
 }
 
 .welcome-message {
+  display: block;
   margin-top: 45vh;
-}
-
-.welcome-message a {
   color: white;
   font-size: 24px;
   font-family: 'IM Fell Double Pica', serif;
+}
+
+section {
+  text-align: left;
 }

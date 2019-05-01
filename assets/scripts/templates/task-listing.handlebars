@@ -1,0 +1,32 @@
+<h3 class="tasks-template-header">Selected Task: </h3>
+
+<table>
+  <tr>
+    <td class="id-header">ID</td>
+    <td class="title-header">Title</td>
+    <td class="description-header">Description</td>
+    <td class="completed-header">Completed</td>
+    <td class="associated-goal-header">Associated Goal</td>
+  </tr>
+</table>
+
+{{#each tasks as |task|}}
+  <section class="task" data-id="{{task.id}}">
+    <table>
+      <tr>
+        <td class="id-col">{{task.id}}</td>
+        <td class="title-col">{{task.title}}</td>
+        <td class="description-col">
+          {{#if task.description}}
+            {{task.description}}
+          {{else}}
+            No description provided.
+          {{/if}}
+        </td>
+        <td>{{task.completed}}</td>
+        <td>{{task.goal_id}}</td>
+      </tr>
+    </table>
+    <button data-id="{{task.id}}" class="btn btn-info remove-btn delete-task">Remove</button>
+  </section>
+{{/each}}

@@ -8,16 +8,24 @@ const authEvents = require('./auth/events.js')
 // use require without a reference to ensure a file is bundled
 // require('./example')
 
+const loggedOut = () => {
+  $('.go-back').hide()
+  $('.sign-up-form').hide()
+  $('.sign-in-form').hide()
+  $('.navi').hide()
+  $('.welcome-message').hide()
+  $('.content').hide()
+  $('.goal-forms').hide()
+  $('.task-forms').hide()
+  $('.change-password-form').hide()
+}
+
 $(() => {
   mainEvents.addHandlers()
   authEvents.addHandlers()
-  $('nav').hide()
-  $('.go-back').hide()
-  $('.sign-up-div').hide()
-  $('.sign-in-div').hide()
-  $('.change-password-button-div').hide()
-  $('.change-password-form-div').hide()
-  $('.error-display').hide()
-  $('.goal-div').hide()
-  $('.welcome-message').hide()
+  loggedOut()
 })
+
+module.exports = {
+  loggedOut
+}

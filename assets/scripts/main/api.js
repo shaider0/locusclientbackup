@@ -27,7 +27,7 @@ const getGoal = (formData) => {
 }
 
 const deleteGoal = (id) => {
-  console.log('id is', id)
+  console.log(id)
   return $.ajax({
     url: config.apiUrl + '/goals/' + id,
     method: 'DELETE',
@@ -44,10 +44,57 @@ const updateGoal = (formData) => {
   })
 }
 
+const getTasks = () => {
+  return $.ajax({
+    url: config.apiUrl + '/tasks',
+    method: 'GET',
+    headers: {authorization: 'Token token=' + store.user.token}
+  })
+}
+
+const createTask = (formData) => {
+  return $.ajax({
+    url: config.apiUrl + '/tasks',
+    method: 'POST',
+    headers: {authorization: 'Token token=' + store.user.token},
+    data: formData
+  })
+}
+
+const getTask = (formData) => {
+  return $.ajax({
+    url: config.apiUrl + '/tasks/' + formData.goal.id,
+    method: 'GET',
+    headers: {authorization: 'Token token=' + store.user.token}
+  })
+}
+
+const deleteTask = (id) => {
+  return $.ajax({
+    url: config.apiUrl + '/tasks/' + id,
+    method: 'DELETE',
+    headers: {authorization: 'Token token=' + store.user.token}
+  })
+}
+
+const updateTask = (formData) => {
+  return $.ajax({
+    url: config.apiUrl + '/goals/' + formData.goal.id,
+    method: 'PATCH',
+    headers: {authorization: 'Token token=' + store.user.token},
+    data: formData
+  })
+}
+
 module.exports = {
   getGoals,
   createGoal,
   getGoal,
   deleteGoal,
-  updateGoal
+  updateGoal,
+  getTasks,
+  createTask,
+  getTask,
+  deleteTask,
+  updateTask
 }

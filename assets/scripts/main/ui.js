@@ -2,14 +2,16 @@
 
 const showGoalsTemplate = require('../templates/goal-listing.handlebars')
 const showGoalTemplate = require('../templates/goal-listing-single.handlebars')
+const showTasksTemplate = require('../templates/task-listing.handlebars')
+const showTaskTemplate = require('../templates/task-listing-single.handlebars')
 
 const getGoalsSuccess = (data) => {
   $('form').trigger('reset')
   $('.welcome-message').hide()
-  $('.main-overlay').append($('.goal-div'))
-  $('.goal-div').show()
+  $('.goal-forms').show()
   const showGoalsHtml = showGoalsTemplate({ goals: data.goals })
   $('.content').html(showGoalsHtml)
+  $('.content').show()
 
   if (!data.goals.length) {
     $('.content').text('No goals found. Create a new one now!')
@@ -36,8 +38,33 @@ const failure = () => {
   setTimeout(clearError, 3000)
 }
 
+const getTasksSuccess = (data) => {
+  $('form').trigger('reset')
+  $('.welcome-message').hide()
+  $('.goal-forms').hide()
+  $('.task-forms').show()
+  const showTasksHtml = showTasksTemplate({ tasks: data.tasks })
+  $('.content').html(showTasksHtml)
+
+  if (!data.tasks.length) {
+    $('.content').text('No tasks found. Create a new one now!')
+    const clearNoTasks = () => {
+      $('.content').text('')
+    }
+    setTimeout(clearNoTasks, 3000)
+  }
+}
+
+const getTaskSuccess = (data) => {
+  $('form').trigger('reset')
+  const showTaskHtml = showTaskTemplate({ task: data.task })
+  $('.content').html(showTaskHtml)
+}
+
 module.exports = {
   getGoalsSuccess,
   failure,
-  getGoalSuccess
+  getGoalSuccess,
+  getTasksSuccess,
+  getTaskSuccess
 }
