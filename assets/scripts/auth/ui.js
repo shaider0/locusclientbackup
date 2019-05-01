@@ -6,6 +6,7 @@ const loggedOut = () => {
   $('.sign-in-form').hide()
   $('.navi').hide()
   $('.welcome-message').hide()
+  $('.content').text('')
   $('.content').hide()
   $('.goal-forms').hide()
   $('.task-forms').hide()
@@ -33,7 +34,7 @@ const home = () => {
 
 const signUpSuccess = function (formData) {
   $('form').trigger('reset')
-  $('.sign-up-display').text('New account created! Please sign in below.')
+  $('.sign-up-display').text('New account created! Please sign in.')
 }
 
 const signInSuccess = function (formData) {
