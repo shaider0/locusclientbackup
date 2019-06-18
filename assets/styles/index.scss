@@ -99,7 +99,7 @@ body {
   margin: 4px auto;
   padding: 5px;
   display: block;
-  width: 350px;
+  width: 500px;
 }
 
 nav {
@@ -191,7 +191,6 @@ nav a, nav form input{
 }
 
 .goal-forms {
-  width: 370px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -199,7 +198,7 @@ nav a, nav form input{
 .goal-forms input {
   display: block;
   margin: 0 auto;
-  width: 80%;
+  width: 500px;
 }
 
 .welcome-message {
@@ -226,6 +225,12 @@ section {
   }
   .content {
     width: 370px;
+  }
+  .sign-up-form input,
+  .sign-in-form input,
+  .change-password-form input,
+  .goal-forms input {
+    width: 350px;
   }
 }
 
