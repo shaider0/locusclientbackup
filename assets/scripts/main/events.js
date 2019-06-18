@@ -100,6 +100,7 @@ const onLogo = () => {
   $('.task-forms').hide()
   $('.content').hide()
   $('.welcome-message').show()
+  $('.time').show()
 }
 
 const addHandlers = () => {

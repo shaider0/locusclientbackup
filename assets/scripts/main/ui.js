@@ -8,6 +8,7 @@ const showTaskTemplate = require('../templates/task-listing-single.handlebars')
 const getGoalsSuccess = (data) => {
   $('form').trigger('reset')
   $('.welcome-message').hide()
+  $('.time').hide()
   $('.goal-forms').show()
   const showGoalsHtml = showGoalsTemplate({ goals: data.goals })
   $('.content').html(showGoalsHtml)

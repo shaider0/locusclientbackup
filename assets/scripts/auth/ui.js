@@ -29,8 +29,8 @@ const home = () => {
   $('.sign-in-form').hide()
   $('.navi').show()
   $('.welcome-message').show()
-  $('.content').show()
   $('.time').show()
+  $('.content').show()
 }
 
 const signUpSuccess = function (formData) {
