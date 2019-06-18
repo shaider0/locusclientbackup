@@ -1,26 +1,7 @@
-  <h3 class="goals-template-header">Selected Goal: </h3>
-
-  <table>
-    <tr>
-      <td class="id-header">ID</td>
-      <td class="title-header">Title</td>
-      <td class="description-header">Description</td>
-    </tr>
-  </table>
-
-    <section class="goal" data-id="{{goal.id}}">
-      <table>
-        <tr>
-          <td class="id-col">{{goal.id}}</td>
-          <td class="title-col">{{goal.title}}</td>
-          <td class="description-col">
-            {{#if goal.description}}
-              {{goal.description}}
-            {{else}}
-              No description provided.
-            {{/if}}
-          </td>
-        </tr>
-      </table>
-      <button data-id="{{goal.id}}" class="btn btn-info remove-btn delete-goal">Remove</button>
-    </section>
+<h3 class="goals-template-header">Selected Goal </h3>
+<section class="goal" data-id="{{goal.id}}">
+  <h1>{{goal.title}}</h1>
+  <p>{{goal.description}}</p>
+  <button data-id="{{goal.id}}" class="btn btn-info remove-btn delete-goal">Remove</button>
+  <button data-id="{{goal.id}}" class="btn btn-info update-btn update-goal">Update</button>
+</section>

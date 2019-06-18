@@ -69,7 +69,6 @@ const onSettings = () => {
   $('.time').hide()
   $('nav').hide()
   $('.goal-forms').hide()
-  $('.task-forms').hide()
   $('.content').hide()
   const changePwForm = $('.change-password-form')
   changePwForm.show()

@@ -32,6 +32,17 @@ body {
   padding-top: 30vh;
 }
 
+.time {
+  width: 800px;
+  font-size: 100px;
+  border-radius: 20px;
+  margin: 200px auto 0 auto;
+  display: block;
+  font-size: 100px;
+  font-family: 'Oswald', sans-serif;
+  color: rgba(255, 255, 255, 0.4)
+}
+
 .l {
   color: rgba(200, 100, 255, 0.7);
 }
@@ -121,16 +132,7 @@ nav a, nav form input{
 }
 
 .content {
-  background-color: #061617;
-}
-
-.goal-forms {
-  background-color: rgba(0, 0, 0, 0.7);
-  width: 100vw;
-  height: 100px;
-  margin: 0 auto;
-  text-align: left;
-  padding: 15px;
+  background-color: #000000ad;
 }
 
 .goal {
@@ -187,17 +189,11 @@ nav a, nav form input{
   text-transform: uppercase;
 }
 
-.remove-btn {
-  font-size: 14px;
-  padding: 1px 2px;
-  background-color: transparent;
-  color: white;
-}
-
 .create-btn,
 .show-btn,
-.update-btn {
-  background-color: transparent;
+.update-btn,
+.remove-btn {
+  background-color: #006879a6;
   color: white;
 }
 
@@ -208,8 +204,15 @@ nav a, nav form input{
 }
 
 .goal-forms {
-  display: flex;
-  justify-content: space-around;
+  width: 370px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.goal-forms input {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .welcome-message {
@@ -223,13 +226,15 @@ section {
   text-align: left;
 }
 
-.time {
-  width: 800px;
-  font-size: 50px;
-  border-radius: 20px;
-  margin: 200px auto 0 auto;
-  display: block;
-  font-size: 100px;
-  font-family: 'Oswald', sans-serif;
-  color: rgba(255, 255, 255, 0.4)
+@media (max-width: 600px) {
+  .title {
+    font-size: 60px;
+  }
+  .time {
+    font-size: 60px;
+    width: auto;
+  }
+  .welcome-message {
+    font-size: 12px;
+  }
 }
