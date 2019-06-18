@@ -4,12 +4,10 @@
     <title>locus</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Do not add `link` tags-->
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=IM+Fell+Double+Pica:400i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
 
-    <!-- Do not add `script` tags-->
     <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
     <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
   </head>
@@ -60,12 +58,13 @@
           </form>
 
           <a class="settings" href="#">Settings</a>
-          <!-- <a class="get-tasks" href="#">Tasks</a> -->
           <a class ="get-goals" href="#">Goals</a>
 
         </nav>
 
-        <a class="welcome-message" href="https://en.wikipedia.org/wiki/Pareto_principle" target="_blank">80 percent of all effects come from 20 percent of causes</a>
+        <div class="time"></div>
+
+        <a class="welcome-message" href="https://en.wikipedia.org/wiki/Pareto_principle" target="_blank">80 percent of all effects come from 20 percent of causes. Focus on what's important. Ignore the rest.</a>
 
         <div class="goal-forms">
 
@@ -98,35 +97,7 @@
 
         </div>
 
-        <!-- <div class="task-forms">
-
-            <form class="create-task-form">
-              <h3>Create a New Task</h3>
-              <input required type="text" name="task[title]" placeholder="title">
-              <input type="text" name="task[description]" placeholder="description">
-              <input type="number" name="task[goal_id]" placeholder="associated goal">
-              <input type="text" name="task[completed]" placeholder="completed (true or false)">
-              <input class="btn btn-info create-btn" type="submit" value="add">
-            </form>
-
-            <form class="get-task-form">
-              <h3>Find a Task</h3>
-              <input required type="number" name="task[id]" placeholder="task id">
-              <input class="btn btn-info show-btn" type="submit" value="find">
-            </form>
-
-            <form class="update-task-form">
-              <h3>Update an Existing Task</h3>
-              <input required type="number" name="task[id]" placeholder="task id">
-              <input type="text" name="task[title]" placeholder="title">
-              <input type="text" name="task[description]" placeholder="description">
-              <input class="btn btn-info update-btn" type="submit" value="update">
-            </form>
-
-        </div> -->
-
-        <div class="content">
-        </div>
+        <div class="content"></div>
 
         <form class="change-password-form">
           <h4>Change Password</h4>

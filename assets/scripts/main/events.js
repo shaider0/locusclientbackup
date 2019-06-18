@@ -32,47 +32,12 @@ const onUpdateGoal = (event) => {
     .catch(ui.failure)
 }
 
-const onGetTasks = () => {
-  api.getTasks()
-    .then(ui.getTasksSuccess)
-    .catch(ui.failure)
-}
-
-const onCreateTask = (event) => {
-  event.preventDefault()
-  const formData = getFormFields(event.target)
-  api.createTask(formData)
-    .then(onGetTasks)
-    .catch(ui.failure)
-}
-
-const onGetTask = (event) => {
-  event.preventDefault()
-  const formData = getFormFields(event.target)
-  api.getTask(formData)
-    .then(ui.getTaskSuccess)
-    .catch(ui.failure)
-}
-
-const onUpdateTask = (event) => {
-  event.preventDefault()
-  const formData = getFormFields(event.target)
-  api.updateGoal(formData)
-    .then(onGetTasks)
-    .catch(ui.failure)
-}
-
 const onDelete = (event) => {
   event.preventDefault()
   if (event.target.matches('.delete-goal')) {
     const id = $(event.target).data('id')
     api.deleteGoal(id)
       .then(onGetGoals)
-      .catch(ui.failure)
-  } else if (event.target.matches('.delete-task')) {
-    const id = $(event.target).data('id')
-    api.deleteTask(id)
-      .then(onGetTasks)
       .catch(ui.failure)
   }
 }
@@ -101,6 +66,7 @@ const onShowSignIn = () => {
 
 const onSettings = () => {
   $('.welcome-message').hide()
+  $('.time').hide()
   $('nav').hide()
   $('.goal-forms').hide()
   $('.task-forms').hide()
@@ -115,6 +81,7 @@ const onCancel = () => {
   changePwForm.hide()
   $('nav').show()
   $('.welcome-message').show()
+  $('.time').show()
 }
 
 const onGoBack = () => {
@@ -147,10 +114,6 @@ const addHandlers = () => {
   $('.go-back').on('click', onGoBack)
   $('.cancel').on('click', onCancel)
   $('.logo').on('click', onLogo)
-  $('.get-tasks').on('click', onGetTasks)
-  $('.create-task-form').on('submit', onCreateTask)
-  $('.get-task-form').on('submit', onGetTask)
-  $('.update-task-form').on('submit', onUpdateTask)
 }
 
 module.exports = {

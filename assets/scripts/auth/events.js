@@ -20,10 +20,6 @@ const onSignIn = function (event) {
     .catch(ui.failure)
 }
 
-const onShowChangePasswordForm = function () {
-  ui.showChangePasswordForm()
-}
-
 const onChangePasswordForm = function (event) {
   event.preventDefault()
 
@@ -44,7 +40,6 @@ const onSignOut = function (event) {
 const addHandlers = function () {
   $('.sign-up-form').on('submit', onSignUp)
   $('.sign-in-form').on('submit', onSignIn)
-  $('.show-change-password-form').on('click', onShowChangePasswordForm)
   $('.change-password-form').on('submit', onChangePasswordForm)
   $('.sign-out').on('submit', onSignOut)
 }

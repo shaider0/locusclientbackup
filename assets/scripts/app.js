@@ -18,12 +18,21 @@ const loggedOut = () => {
   $('.goal-forms').hide()
   $('.task-forms').hide()
   $('.change-password-form').hide()
+  $('.time').hide()
 }
 
 $(() => {
   mainEvents.addHandlers()
   authEvents.addHandlers()
   loggedOut()
+
+  const setTime = () => {
+    const dateWithoutSecond = new Date()
+    const time = dateWithoutSecond.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})
+    document.querySelector('.time').innerHTML = time
+  }
+  setTime()
+  window.setInterval(setTime, 1000)
 })
 
 module.exports = {

@@ -30,6 +30,7 @@ const home = () => {
   $('.navi').show()
   $('.welcome-message').show()
   $('.content').show()
+  $('.time').show()
 }
 
 const signUpSuccess = function (formData) {
@@ -70,6 +71,7 @@ const changePwSuccess = function () {
   const show = () => {
     $('nav').show()
     $('.welcome-message').show()
+    $('.time').show()
   }
   setTimeout(show, 3000)
 }
