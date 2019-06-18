@@ -26,6 +26,14 @@ const getGoal = (formData) => {
   })
 }
 
+const getGoalForUpdate = (id) => {
+  return $.ajax({
+    url: config.apiUrl + '/goals/' + id,
+    method: 'GET',
+    headers: {authorization: 'Token token=' + store.user.token}
+  })
+}
+
 const deleteGoal = (id) => {
   console.log(id)
   return $.ajax({
@@ -35,9 +43,9 @@ const deleteGoal = (id) => {
   })
 }
 
-const updateGoal = (formData) => {
+const updateGoal = (formData, id) => {
   return $.ajax({
-    url: config.apiUrl + '/goals/' + formData.goal.id,
+    url: config.apiUrl + '/goals/' + id,
     method: 'PATCH',
     headers: {authorization: 'Token token=' + store.user.token},
     data: formData
@@ -48,6 +56,7 @@ module.exports = {
   getGoals,
   createGoal,
   getGoal,
+  getGoalForUpdate,
   deleteGoal,
   updateGoal
 }

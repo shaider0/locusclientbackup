@@ -7,7 +7,9 @@ const getGoalsSuccess = (data) => {
   $('form').trigger('reset')
   $('.welcome-message').hide()
   $('.time').hide()
-  $('.goal-forms').show()
+  $('.update-goal-div').hide()
+  $('.create-goal-div').show()
+  $('.get-goal-div').show()
   const showGoalsHtml = showGoalsTemplate({ goals: data.goals })
   $('.content').html(showGoalsHtml)
   $('.content').show()
@@ -27,6 +29,12 @@ const getGoalSuccess = (data) => {
   $('.content').html(showGoalHtml)
 }
 
+const getGoalForUpdateSuccess = (data) => {
+  $('.update-goal-form').attr('data-id', data.goal.id)
+  $('.update-goal-title').attr('value', data.goal.title)
+  $('.update-goal-description').attr('value', data.goal.description)
+}
+
 const failure = () => {
   $('form').trigger('reset')
   $('.message-display').text('Something went wrong. Please try again')
@@ -40,5 +48,6 @@ const failure = () => {
 module.exports = {
   getGoalsSuccess,
   failure,
-  getGoalSuccess
+  getGoalSuccess,
+  getGoalForUpdateSuccess
 }

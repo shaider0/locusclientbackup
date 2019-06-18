@@ -15,8 +15,9 @@ const loggedOut = () => {
   $('.navi').hide()
   $('.welcome-message').hide()
   $('.content').hide()
-  $('.goal-forms').hide()
-  $('.task-forms').hide()
+  $('.update-goal-div').hide()
+  $('.create-goal-div').hide()
+  $('.get-goal-div').hide()
   $('.change-password-form').hide()
   $('.time').hide()
 }

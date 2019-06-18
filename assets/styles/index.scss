@@ -17,6 +17,7 @@ body {
   height: 100vh;
   background-image: url('https://images.unsplash.com/photo-1528818955841-a7f1425131b5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2689&q=80');
   background-size: cover;
+  background-position: center center;
 }
 
 .overlay {
@@ -133,39 +134,28 @@ nav a, nav form input{
 
 .content {
   background-color: #000000ad;
+  width: 800px;
+  margin: 0 auto;
+  border-radius: 5px;
 }
 
 .goal {
-  border: 1px solid grey;
+  border: 1px solid #292929;
   border-radius: 5px;
   padding: 10px;
   margin: 5px;
   color: white;
-  font-size: 20px
+  font-size: 20px;
+  text-align: center;
 }
 
 .goals-template-header {
   padding-top: 30px;
+  color: #17a2b8;
 }
 
 .message-display {
   font-size: 20px;
-}
-
-.id-col {
-  width: 40px;
-}
-
-.title-col {
-  width: 400px;
-  border-left: 1px solid grey;
-  padding-left: 15px;
-}
-
-.description-col {
-  width: 800px;
-  border-left: 1px solid grey;
-  padding-left: 15px;
 }
 
 .id-header {
@@ -176,17 +166,13 @@ nav a, nav form input{
 }
 
 .title-header {
-  width: 400px;
-  padding-left: 14px;
   font-weight: bold;
   text-transform: uppercase;
+  font-size: 24px;
 }
 
-.description-header {
-  width: 800px;
-  padding-left: 10px;
-  font-weight: bold;
-  text-transform: uppercase;
+.description {
+  font-size: 14px;
 }
 
 .create-btn,
@@ -201,6 +187,7 @@ nav a, nav form input{
 .get-goal-form h3,
 .update-goal-form h3 {
   text-align: center;
+  font-size: 18px;
 }
 
 .goal-forms {
@@ -226,7 +213,7 @@ section {
   text-align: left;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .title {
     font-size: 60px;
   }
@@ -237,4 +224,11 @@ section {
   .welcome-message {
     font-size: 12px;
   }
+  .content {
+    width: 370px;
+  }
+}
+
+.id {
+  font-size: 12px;
 }

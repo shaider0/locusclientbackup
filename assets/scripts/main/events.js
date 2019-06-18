@@ -26,19 +26,26 @@ const onGetGoal = (event) => {
 
 const onUpdateGoal = (event) => {
   event.preventDefault()
+  const id = event.target.dataset.id
   const formData = getFormFields(event.target)
-  api.updateGoal(formData)
+  api.updateGoal(formData, id)
     .then(onGetGoals)
     .catch(ui.failure)
 }
 
-const onDelete = (event) => {
+const onContent = (event) => {
   event.preventDefault()
   if (event.target.matches('.delete-goal')) {
     const id = $(event.target).data('id')
     api.deleteGoal(id)
       .then(onGetGoals)
       .catch(ui.failure)
+  } else if (event.target.matches('.show-update-goal')) {
+    const id = $(event.target).data('id')
+    api.getGoalForUpdate(id)
+      .then(ui.getGoalForUpdateSuccess)
+      .catch(ui.failure)
+    $('.update-goal-div').show()
   }
 }
 
@@ -68,7 +75,9 @@ const onSettings = () => {
   $('.welcome-message').hide()
   $('.time').hide()
   $('nav').hide()
-  $('.goal-forms').hide()
+  $('.update-goal-div').hide()
+  $('.create-goal-div').hide()
+  $('.get-goal-div').hide()
   $('.content').hide()
   const changePwForm = $('.change-password-form')
   changePwForm.show()
@@ -95,7 +104,9 @@ const onGoBack = () => {
 
 const onLogo = () => {
   $('form').trigger('reset')
-  $('.goal-forms').hide()
+  $('.update-goal-div').hide()
+  $('.create-goal-div').hide()
+  $('.get-goal-div').hide()
   $('.task-forms').hide()
   $('.content').hide()
   $('.welcome-message').show()
@@ -107,8 +118,10 @@ const addHandlers = () => {
   $('.settings').on('click', onSettings)
   $('.create-goal-form').on('submit', onCreateGoal)
   $('.get-goal-form').on('submit', onGetGoal)
-  $('.content').on('click', onDelete)
+
+  $('.content').on('click', onContent)
   $('.update-goal-form').on('submit', onUpdateGoal)
+
   $('.show-sign-up').on('click', onShowSignUp)
   $('.show-sign-in').on('click', onShowSignIn)
   $('.go-back').on('click', onGoBack)

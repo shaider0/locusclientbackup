@@ -8,15 +8,15 @@ const loggedOut = () => {
   $('.welcome-message').hide()
   $('.content').text('')
   $('.content').hide()
-  $('.goal-forms').hide()
+  $('.update-goal-div').hide()
+  $('.create-goal-div').hide()
+  $('.get-goal-div').hide()
   $('.task-forms').hide()
   $('.change-password-form').hide()
   $('.title').show()
   $('.tagline').show()
   $('.show-sign-up').show()
   $('.show-sign-in').show()
-  $('goal-forms').hide()
-  $('task-forms').hide()
 }
 
 const home = () => {
