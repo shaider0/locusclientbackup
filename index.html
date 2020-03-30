@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>locus</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+
+    <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+    <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+  </head>
+
+  <body>
+    <!-- <button class="login-quick">login</button> -->
+
+    <div class="background">
+      <div class="overlay">
+
+        <div class="message-display"></div>
+
+        <div class="site-title">
+          <span class="l">L</span>
+          <span class="o">O</span>
+          <span class="c">C</span>
+          <span class="u">U</span>
+          <span class="s">S</span>
+        </div>
+
+        <p class="tagline">Simply productive</p>
+
+        <span class="go-back"><a href="#">Go Back</a></span>
+        <span class="show-sign-up"><a href="#">Sign Up</a></span>
+        <span class="show-sign-in"><a href="#">Sign In</a></span>
+
+        <form class="sign-up-form">
+          <h4>Sign Up Form</h4>
+          <input required type="email" name="credentials[email]" placeholder="Email">
+          <input required type="password" name="credentials[password]" placeholder="Password">
+          <input required type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+          <input class="btn btn-info" type="submit" value="Sign Up Now!">
+        </form>
+
+        <form class="sign-in-form">
+          <h4>Sign In</h4>
+          <input required class="" type="email" name="credentials[email]" placeholder="Email">
+          <input required class="" type="password" name="credentials[password]" placeholder="Password">
+          <input class="btn btn-info" type="submit" value="Sign in!">
+          <p class="sign-in-display"></p>
+        </form>
+<!-- ================================================================================= -->
+        <nav class="navi">
+          <img class="logo" alt="logo" src="./public/logo.png">
+
+          <form class="sign-out">
+            <input class="sign-out-btn" type="submit" value="Sign Out">
+          </form>
+
+          <a class="settings" href="#">Settings</a>
+          <a class ="get-goals" href="#">Goals</a>
+
+        </nav>
+<!-- ================================================================================= -->
+
+        <span class="date"></span>
+        <span class="time"></span>
+
+        <a class="welcome-message" href="https://en.wikipedia.org/wiki/Pareto_principle" target="_blank">80 percent of all effects come from 20 percent of causes. Focus on what's important. Ignore everything else.</a>
+
+<!-- GOALS BEGIN HERE -->
+
+        <div class="goal-forms">
+
+            <form class="create-goal-form">
+              <h3 class="form-header">Create a New Goal</h3>
+              <input class="create-resource-title" required type="text" name="goal[title]" placeholder="title">
+              <input class="create-resource-description" type="text" name="goal[description]" placeholder="description">
+
+              <div class="create-resource-bottom-row">
+                <input class="btn btn-info create-btn" type="submit" value="Create">
+              </div>
+            </form>
+
+            <!-- to-do: get this to work as a search for title -->
+
+            <!-- <form class="get-goal-form">
+              <h3>Find a Goal</h3>
+              <input required type="number" name="goal[name]" placeholder="goal id">
+              <input class="btn btn-info show-btn" type="submit" value="find">
+            </form> -->
+
+            <form class="update-goal-form">
+              <h3 class="form-header">Update an Existing Goal</h3>
+              <input required type="number" name="goal[id]" placeholder="goal id">
+              <input type="text" name="goal[title]" placeholder="title">
+              <input type="text" name="goal[description]" placeholder="description">
+              <input class="btn btn-info update-btn" type="submit" value="update">
+            </form>
+
+        </div>
+
+        <div class="content">
+        </div>
+
+        <form class="change-password-form">
+          <h4>Change Password</h4>
+          <input type="password" name="passwords[old]" placeholder="current password">
+          <input type="password" name="passwords[new]" placeholder="new password">
+          <input class="btn btn-info" type="submit" value="Change password now">
+          <a class="cancel" href="#">Cancel</a>
+        </form>
+
+      </div>
+    </div>
+
+  </body>
+</html>
